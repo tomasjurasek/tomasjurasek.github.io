@@ -32,7 +32,7 @@ Musíme nastavit dva kroky. První z nich je abychom vybrali šablonu pro to, co
 
 ![CI_CD](/images/posts/azure-devops-ci-cd/CD_Artifacts.PNG)
 
-A druhý krok je nastavit zdroj artefaktů. V našem případě budeme chtít vytvořené artefakty z naší CI build pipeline.¨
+A druhý krok je nastavit zdroj artefaktů. V našem případě budeme chtít vytvořené artefakty z naší CI build pipeline.
 
 ![CI_CD](/images/posts/azure-devops-ci-cd/CD_Template.PNG)
 
