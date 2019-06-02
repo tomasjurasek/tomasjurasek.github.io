@@ -9,7 +9,7 @@ name: Developer Blog
 description: by Tomáš Jurásek
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: images/my_image.jpg
+avatar: /images/my_image.jpg
 
 #
 # Flags below are optional

@@ -18,7 +18,6 @@ WHEN NOT MATCHED BY SOURCE THEN;
 
 ### ***Příklad:***
 Potřebuji do tabulky vložit záznam pokud neexistuje. V opačném případě upravím jeden sloupec.
-
 První co nás může napadnout je použití samostatných příkazů SELECT a na základě výsledku provést INSERT nebo UPDATE.
 
 ```csharp
