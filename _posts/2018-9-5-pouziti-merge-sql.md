@@ -20,38 +20,41 @@ WHEN NOT MATCHED BY SOURCE THEN;
 Potřebuji do tabulky vložit záznam pokud neexistuje. V opačném případě upravím jeden sloupec.
 První co nás může napadnout je použití samostatných příkazů SELECT a na základě výsledku provést INSERT nebo UPDATE.
 
-```csharp
-  var exists = connection.QueryFirstOrDefault<bool>("SELECT 1 FROM [dbo].[Products] WHERE ProductId1 = @ProductId1 AND ProductId2 = @ProductId2 AND Date = @Date", new
+```cs
+var exists = connection.QueryFirstOrDefault<bool>("SELECT 1 FROM [dbo].[Products] WHERE ProductId1 = @ProductId1 AND ProductId2 = @ProductId2 AND Date = @Date", 
+new
+{
+    up.ProductId1,
+    up.ProductId2,
+    up.DateTime.Date
+});
+
+if (exists)
+{
+    connection.Execute("UPDATE [dbo].[Products] SET Count = Count+1 WHERE ProductId1 = @ProductId1 AND ProductId2 = @ProductId2 AND Date = @Date", 
+    new
     {
         up.ProductId1,
         up.ProductId2,
         up.DateTime.Date
     });
-
-    if (exists)
+}
+else
+{
+    connection.Execute("INSERT INTO [dbo].[Products] ([ProductId1], [ProductId2], [Date], [Count]) VALUES (@ProductId1, @ProductId2, @Date, @Quantity)", 
+    new
     {
-        connection.Execute("UPDATE [dbo].[Products] SET Count = Count+1 WHERE ProductId1 = @ProductId1 AND ProductId2 = @ProductId2 AND Date = @Date", new
-        {
-            up.ProductId1,
-            up.ProductId2,
-            up.DateTime.Date
-        });
-    }
-    else
-    {
-        connection.Execute("INSERT INTO [dbo].[Products] ([ProductId1], [ProductId2], [Date], [Count]) VALUES (@ProductId1, @ProductId2, @Date, @Quantity)", new
-        {
-            up.ProductId1,
-            up.ProductId2,
-            up.DateTime.Date,
-            up.Quantity
-        });
-    }
+        up.ProductId1,
+        up.ProductId2,
+        up.DateTime.Date,
+        up.Quantity
+    });
+}
 ```
 
 Abychom si ušetřili několik řádků a zbytečně vytěžovali databázi několika příkazi, můžeme použít MERGE SQL, který dokáže na základě výsledku z porovnání tabulek provést buď INSERT nebo UPDATE.
 
-```csharp
+```cs
 await connection.ExecuteAsync(@"
 MERGE Products
 AS target USING(SELECT @ProductId1, @ProductId2, @Date, @Quantity, @LanguageId) 
