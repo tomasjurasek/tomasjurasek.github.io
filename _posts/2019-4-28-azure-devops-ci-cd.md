@@ -11,33 +11,33 @@ title: Azure DevOps - CI/CD
 
 Pro nastavení ***CI*** se musíme proklikat v Azure DevOps do záložky ***Pipelines*** a následně ***Builds***. Při vytváření nové build pipeline musíme první zvolit zdroj pro stahování zdrojových kódu. Máme hned několik možností - Azure DevOps Git, Gighub, SVN,...
 
-![CI_CD](/images/posts/azure-devops-ci-cd/CI_RepoSource.png)
+![CI_CD](/images/posts/azure-devops-ci-cd/CI_RepoSource.PNG)
 
 Já mám uložené zdrojové kody přímo v ***Azure DevOps Repos***, tak vyberu zdroj - ***Azure DevOps Git***. 
 Dále si musím vybrat šablonu pro build, která nám vyhovuje. Jelikož se jedná o ASP.NET aplikaci, tak zvolíme šablonu ***ASP.NET***, která zahrnuje kroky - build, test.
 
-![CI_CD](/images/posts/azure-devops-ci-cd/CI_Templates.png)
+![CI_CD](/images/posts/azure-devops-ci-cd/CI_Templates.PNG)
 
 A dále nám vyskočí souhrn kroků vybrané šablony - nuget restore, build, test, publish artifacts, které můžeme libovolně dále upravovat.
 Pokud bychom do pipeline chtěli přidat ještě analýzu kódu pomoci [SonarCloud](https://sonarcloud.io/about), tak stačí k Agentovi přidat další tasky - ***Prepare analysis on SonarCloud a Run Code Analysis***, které slouží pro integraci se zmíněným SonarCloudem.
 
 Finální build pipeline potom bude vypadat následovně. Build pipeline se bude potom automaticky spouštět na základě změn ve dříve vybraném repozitáři a branche.
 
-![CI_CD](/images/posts/azure-devops-ci-cd/CI_Final.png)
+![CI_CD](/images/posts/azure-devops-ci-cd/CI_Final.PNG)
 
 Tak a teď bychom potřebovali zaintegrované změny a buildy nějak dostat na náš server, aby změny byly viditelné.
 
 To už se odehrává v záložce ***Releases***, kde vytvoříme novou release pipeline.
 Musíme nastavit dva kroky. První z nich je abychom vybrali šablonu pro to, co se má vykonat za akci. V našem případě půjde o ***Azure App Service deployment***, které vyžaduje připojení na naše Azure předplatné a již vytvořenou službu Web App service, do které chcete aplikaci vypublikovat.
 
-![CI_CD](/images/posts/azure-devops-ci-cd/CD_Artifacts.png)
+![CI_CD](/images/posts/azure-devops-ci-cd/CD_Artifacts.PNG)
 
 A druhý krok je nastavit zdroj artefaktů. V našem případě budeme chtít vytvořené artefakty z naší CI build pipeline.¨
 
-![CI_CD](/images/posts/azure-devops-ci-cd/CD_Template.png)
+![CI_CD](/images/posts/azure-devops-ci-cd/CD_Template.PNG)
 
 Pokud chceme, aby se release prováděl po každé úspěšné CI build pipelině, musíme ***zapnout trigger*** v nastavení artefaktů.
 
-![CI_CD](/images/posts/azure-devops-ci-cd/CD_Final.png)
+![CI_CD](/images/posts/azure-devops-ci-cd/CD_Final.PNG)
 
 Vše uložímé a můžeme vyzkoušet celý CI/CD proces provedením změn v repozitáři..
