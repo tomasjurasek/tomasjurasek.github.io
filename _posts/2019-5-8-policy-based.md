@@ -3,7 +3,7 @@ layout: post
 title: ASP.NET Core - Policy-Based Autorizace
 ---
 
-Pokud jste dříve pracovali s autorizací v ASP.NET, tak nebylo moc jednoduchých možností jak autorizovat uživatele jinak než podle Rolí - *[Authorize(Roles="Admin")]*.
+Pokud jste dříve pracovali s autorizací v ASP.NET, tak nebylo moc jednoduchých možností jak autorizovat uživatele jinak než podle Rolí - **[Authorize(Roles="Admin")]**.
 
 Při složitejších scénářích jste si museli vše řešit pomocí vlastní infrastruktury. Pomocí *Policy-Based* autorizaci máte více možností jak tyhle scénáře jednoduše řešit.
 
