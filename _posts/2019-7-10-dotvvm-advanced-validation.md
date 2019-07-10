@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DotVVM - validace formulářů
+title: DotVVM - možnosti validace formulářů
 ---
 Ještě neznáte framework [DotVVM](https://www.dotvvm.com/)?
 
