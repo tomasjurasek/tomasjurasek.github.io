@@ -10,6 +10,7 @@ Ještě neznáte framework [DotVVM](https://www.dotvvm.com/)?
 ***Příklad -***
 Máme jednoduchý formulář, kde zadáváme základní informace o uživateli - jméno, příjmení, email, které chceme validovat.
   
+---
 
 **1. Data Annotations**
 
@@ -29,7 +30,7 @@ config.ClientSideValidation = false;
         public string Email { get; set; }
     }
 ```
-
+---
 **2. IValidatableObject**
 
 Objekt, který chceme validovat musí dědit z interface IValidatableObject, který implementuje metodu Validate.
@@ -54,6 +55,7 @@ Objekt, který chceme validovat musí dědit z interface IValidatableObject, kte
     }
 ```
 
+---
 
 **3. Složitější validace**
 
@@ -74,9 +76,11 @@ public void Save()
 }
 ```
 
+---
 
+**Výsledný zdrojový kod**
 
-Výsledné dothtml bude vypadat takhle:
+*Dothtml*
 
 ```html
 <form Validator.InvalidCssClass="error">
@@ -91,7 +95,30 @@ Výsledné dothtml bude vypadat takhle:
     </div>
     <dot:Button Click="{command: Save()}" Text="Save" />
 </form>
-
 ```
+*ViewModel*
+```cs
+public class DefaultViewModel : MasterPageViewModel
+{
+    private readonly IUserService userService;
+    public UserForm UserForm { get; set; } = new UserForm();
+    public DefaultViewModel(IUserService userService)
+    {
+        this.userService = userService;
+    }
+
+
+    public void Save()
+    {
+        var emailExists = userService.CheckIfEmailExists(UserForm.Email);
+        if (emailExists)
+        {
+            this.AddModelError(v => v.UserForm.Email, "The e-mail address is already registered!");
+            Context.FailOnInvalidModelState();
+        }
+    }
+}
+```
+
 
 Více o validacích v DotVVM si můžete přečíst [zde](https://www.dotvvm.com/docs/tutorials/basics-validation/2.0).
