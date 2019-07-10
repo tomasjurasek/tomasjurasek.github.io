@@ -78,7 +78,7 @@ public void Save()
 
 ---
 
-**Výsledný zdrojový kod**
+**Výsledný zdrojový kód**
 
 *Dothtml*
 
