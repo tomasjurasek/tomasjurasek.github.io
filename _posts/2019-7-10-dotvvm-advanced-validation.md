@@ -62,7 +62,7 @@ Pro složitější validace -  potřebujete ověřit data v databázi a na zákl
 K těmto případům můžete využit extension metodu v DotVVM -  [AddModelError](https://github.com/riganti/dotvvm/blob/c49b55e079b3aeb5fa30d5818675a86f656a33d6/src/DotVVM.Framework/ViewModel/Validation/ValidationErrorFactory.cs#L22), která přiřadí chybovou hlášku, k inputu.
 
 Potom při zavolání metody Save se hodnota s emailem zkontroluje v databázi a pokud email již existuje, vytvořím chybovou hlášku. 
-Na konci je potřeba zavolat metodu [FailOnInvalidModelState](https://github.com/riganti/dotvvm/blob/ce6ce869556e9fc22e8e9286fabd8127569891f3/src/DotVVM.Framework/Hosting/DotvvmRequestContextExtensions.cs#L139) na Contextu, která ukončí requesta vrátí response pro stránku.
+Na konci je potřeba zavolat metodu [FailOnInvalidModelState](https://github.com/riganti/dotvvm/blob/ce6ce869556e9fc22e8e9286fabd8127569891f3/src/DotVVM.Framework/Hosting/DotvvmRequestContextExtensions.cs#L139) na Contextu, která ukončí request a vrátí response pro stránku.
 ```cs
 public void Save()
 {
