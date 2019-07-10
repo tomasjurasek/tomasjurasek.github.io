@@ -1,0 +1,98 @@
+---
+layout: post
+title: Možnosti validace formulářů v DotVVM
+---
+Ještě neznáte [DotVVM](https://www.dotvvm.com/)?
+
+
+DotVVM podporuje Model validace, které určitě znáte z jiných ASP.NET technologiích jako MVC, Web API,..
+
+***Příklad:***
+Máme jednoduchý formulář, kde zadávám základní informace o uživateli - jméno, příjmení, email, které chceme validovat.
+
+
+
+**1. Data Annotations**
+
+Pomocí jednoduchých data annotation můžeme  zvalidovat hodnoty v objektu, které přicházejí na server. DotVVM umí [několik attributů](https://www.dotvvm.com/docs/tutorials/basics-client-side-validation/2.0) přímo jako clientské validace, kterou si můžete v konfiguraci vypnout.
+```cs
+config.ClientSideValidation = false;
+```
+```cs
+    public class UserForm
+    {
+        [Required]
+        public string FirstName { get; set; }
+        [Required]
+        public string LastName { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+    }
+```
+
+**2. IValidatableObject**
+
+Objekt, který chceme validovat musí dědit z interface IValidatableObject, který implementuje metodu Validate.
+```cs
+    public class UserForm : IValidatableObject
+    {
+        [Required]
+        public string FirstName { get; set; }
+        [Required]
+        public string LastName { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (FirstName.Contains("."))
+            {
+                yield return new ValidationResult("Error Message", new string[] { nameof(FirstName) });
+            }
+        }
+    }
+```
+
+
+**3. Složitější validace**
+
+Pro složitější validace -  potřebujete ověřit data v databázi a na základě výsledku vyvolat validační chybu.
+K těmto případům můžete využit extension metodu v DotVVM -  [AddModelError](https://github.com/riganti/dotvvm/blob/c49b55e079b3aeb5fa30d5818675a86f656a33d6/src/DotVVM.Framework/ViewModel/Validation/ValidationErrorFactory.cs#L22), která přiřadí chybovou hlášku, k inputu.
+
+Potom při zavolání metody Save se hodnota s emailem zkontroluje v databázi a pokud email již existuje, vytvořím chybovou hlášku. 
+Na konci je potřeba zavolat metodu [FailOnInvalidModelState](https://github.com/riganti/dotvvm/blob/ce6ce869556e9fc22e8e9286fabd8127569891f3/src/DotVVM.Framework/Hosting/DotvvmRequestContextExtensions.cs#L139) na Contextu, která ukončí requesta vrátí response pro stránku.
+```cs
+public void Save()
+{
+    var emailExists = userService.CheckIfEmailExists(UserForm.Email);
+    if (emailExists)
+    {
+        this.AddModelError(v => v.UserForm.Email, "Error message");
+        Context.FailOnInvalidModelState();
+    }
+}
+```
+
+
+
+Výsledné dothtml bude vypadat takhle:
+
+```html
+<form Validator.InvalidCssClass="error">
+    <div>
+        <dot:TextBox Text="{value: UserForm.FirstName}" Validator.Value="{value: UserForm.FirstName}" />
+    </div>
+    <div>
+        <dot:TextBox Text="{value: UserForm.LastName}" Validator.Value="{value: UserForm.LastName}" />
+    </div>
+    <div>
+        <dot:TextBox Text="{value: UserForm.Email}" Validator.Value="{value: UserForm.Email}" />
+    </div>
+    <dot:Button Click="{command: Save()}" Text="Save" />
+</form>
+
+```
+
+Více o validacích v DotVVM si můžete přečíst [zde](https://www.dotvvm.com/docs/tutorials/basics-validation/2.0).
