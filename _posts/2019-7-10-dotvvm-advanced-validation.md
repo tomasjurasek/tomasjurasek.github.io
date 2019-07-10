@@ -7,8 +7,7 @@ Ještě neznáte framework [DotVVM](https://www.dotvvm.com/)?
 
 [DotVVM](https://www.dotvvm.com/) podporuje Model validace, které určitě znáte z jiných ASP.NET technologiích jako MVC, Web API,..
 
-***Příklad -***
-Máme jednoduchý formulář, kde zadáváme základní informace o uživateli - jméno, příjmení, email, které chceme validovat.
+***Příklad -*** máme jednoduchý formulář, kde zadáváme základní informace o uživateli - jméno, příjmení, email, které chceme validovat.
   
 ---
 
