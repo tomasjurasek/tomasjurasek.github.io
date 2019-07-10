@@ -18,40 +18,40 @@ Pomocí jednoduchých data annotation můžeme  zvalidovat hodnoty v objektu, kt
 config.ClientSideValidation = false;
 ```
 ```cs
-    public class UserForm
-    {
-        [Required]
-        public string FirstName { get; set; }
-        [Required]
-        public string LastName { get; set; }
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
-    }
+public class UserForm
+{
+    [Required]
+    public string FirstName { get; set; }
+    [Required]
+    public string LastName { get; set; }
+    [Required]
+    [EmailAddress]
+    public string Email { get; set; }
+}
 ```
 ---
 **2. IValidatableObject**
 
 Objekt, který chceme validovat musí dědit z interface IValidatableObject, který implementuje metodu Validate.
 ```cs
-    public class UserForm : IValidatableObject
-    {
-        [Required]
-        public string FirstName { get; set; }
-        [Required]
-        public string LastName { get; set; }
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+public class UserForm : IValidatableObject
+{
+    [Required]
+    public string FirstName { get; set; }
+    [Required]
+    public string LastName { get; set; }
+    [Required]
+    [EmailAddress]
+    public string Email { get; set; }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+    public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+    {
+        if (FirstName.Contains("."))
         {
-            if (FirstName.Contains("."))
-            {
-                yield return new ValidationResult("Error Message", new string[] { nameof(FirstName) });
-            }
+            yield return new ValidationResult("Error Message", new string[] { nameof(FirstName) });
         }
     }
+}
 ```
 
 ---
