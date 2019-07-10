@@ -2,15 +2,14 @@
 layout: post
 title: Možnosti validace formulářů v DotVVM
 ---
-Ještě neznáte [DotVVM](https://www.dotvvm.com/)?
+Ještě neznáte framework [DotVVM](https://www.dotvvm.com/)?
 
 
-DotVVM podporuje Model validace, které určitě znáte z jiných ASP.NET technologiích jako MVC, Web API,..
+[DotVVM](https://www.dotvvm.com/) podporuje Model validace, které určitě znáte z jiných ASP.NET technologiích jako MVC, Web API,..
 
-***Příklad:***
+***Příklad -***
 Máme jednoduchý formulář, kde zadávám základní informace o uživateli - jméno, příjmení, email, které chceme validovat.
-
-
+  
 
 **1. Data Annotations**
 
