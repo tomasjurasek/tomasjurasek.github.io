@@ -27,6 +27,8 @@ public class UserForm
     public string Email { get; set; }
 }
 ```
+Nebo si můžete napsát vlastní validační attribut poděděním třídy [ValidationAttribute ](https://docs.microsoft.com/cs-cz/dotnet/api/system.componentmodel.dataannotations.validationattribute?view=netcore-2.2).
+
 ---
 **2. IValidatableObject**
 
