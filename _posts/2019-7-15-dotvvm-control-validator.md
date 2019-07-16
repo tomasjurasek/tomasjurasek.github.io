@@ -8,7 +8,7 @@ Ještě pořád neznáte framework [DotVVM](https://www.dotvvm.com/)?
 Komponenta [Validator](https://www.dotvvm.com/docs/controls/builtin/Validator/latest) slouží pro zobrazení validačních hlášek, které jsou součástí [Validation.Target](https://www.dotvvm.com/docs/tutorials/basics-validation-target/latest). Pokud není [Validation.Target](https://www.dotvvm.com/docs/tutorials/basics-validation-target/latest) nastavený, validuje se celý ViewModel.
 
 **Proměnné**
-* *InvalidCssClass* - nastaví css třídu při nevalidním stavu.
+* *InvalidCssClass* - nastaví css třídu při nevalidním stavu
 * *SetToolTipText* - nastaví validační hlášku jako tooltip na kontrolce
 * *ShoErrorMessageText* - zobrazí validační zprávu
 * *Value* - hodnota, které se validuje
