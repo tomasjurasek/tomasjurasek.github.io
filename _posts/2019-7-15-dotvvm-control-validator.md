@@ -76,7 +76,7 @@ public class Form_2
 U jednotlivých formulářů musíme nastavit Validation.Target, aby jsme při kliknutí na tlačítko Další validovali jen aktuálně zobrazenýz formulář.
 
 ```html
-<div Visible="{value: _root.CurrentForm == 1 }" Validator.ShowErrorMessageText="true">
+<div Visible="{value: _root.CurrentForm == 1}" Validator.ShowErrorMessageText="true">
     <form Validation.Target="{value: Form_1}">
         <div>
             <dot:TextBox Text="{value: Form_1.FirstName}" Validator.Value="{value: Form_1.FirstName}" />
