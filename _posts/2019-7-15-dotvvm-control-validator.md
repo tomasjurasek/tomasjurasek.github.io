@@ -9,7 +9,7 @@ Komponenta [Validator](https://www.dotvvm.com/docs/controls/builtin/Validator/la
 
 **Proměnné**
 * *InvalidCssClass* - nastaví css třídu při nevalidním stavu
-* *SetToolTipText* - nastaví validační hlášku jako tooltip na kontrolce
+* *SetToolTipText* - zobrazí validační hlášku jako tooltip na kontrolce
 * *ShoErrorMessageText* - zobrazí validační zprávu
 * *Value* - hodnota, které se validuje
 
