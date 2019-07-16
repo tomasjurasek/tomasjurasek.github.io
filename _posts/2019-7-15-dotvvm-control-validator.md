@@ -70,7 +70,7 @@ public class Form_2
 }
 ```
 
-U jednotlivých formulářů musíme nastavit [Validation.Target](https://www.dotvvm.com/docs/tutorials/basics-validation-target/latest), aby jsme při kliknutí na tlačítko *Další* validovali jen aktuální formulář.
+U jednotlivých formulářů musíme nastavit [Validation.Target](https://www.dotvvm.com/docs/tutorials/basics-validation-target/latest), abychom při kliknutí na tlačítko *Další* validovali jen aktuální formulář.
 
 ```html
 <div Visible="{value: _root.CurrentForm == 1}" Validator.ShowErrorMessageText="true">
