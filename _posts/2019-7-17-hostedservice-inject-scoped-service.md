@@ -11,13 +11,13 @@ Poté třídu zaregistrujete jako hosted service:
 services.AddHostedService<T>();
 ```
 
-# Problém
+## Problém
 
 Do hosted služby občas potřebujeme závislosti služeb, které mají registrovaný životní cyklus jako *'Scoped'*. Hosted služba nevytváří vlastní scope, a tím pádem služby zaregistrované jako *'Scoped'* budou vyhazovat exception typu:
 
-***System.InvalidOperationException: ‘Cannot consume scoped service ‘Service’ from singleton ‘Microsoft.Extensions.Hosting.IHostedService’.***
+>***System.InvalidOperationException: ‘Cannot consume scoped service ‘Service’ from singleton ‘Microsoft.Extensions.Hosting.IHostedService’.***
 
-# Řešení
+## Řešení
 
 Pro použítí závislostí služeb typu 'Scoped' si musíme vytvořit vlastní scope pomocí ***IServiceScopeFactory***, kde si službu vytáhneme přes - ***GetRequiredService< T>()***
 
