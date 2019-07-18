@@ -13,7 +13,7 @@ services.AddHostedService<T>();
 
 ## Problém
 
-Do hosted služby občas potřebujeme závislosti služeb, které mají registrovaný životní cyklus jako *'Scoped'*. Hosted služba nevytváří vlastní scope, a tím pádem služby zaregistrované jako *'Scoped'* budou vyhazovat exception typu:
+Do hosted služby občas potřebujeme závislosti služeb, které mají registrovaný životní cyklus jako *'Scoped'*. Hosted služba nevytváří vlastní scope (je registrovaná jako singleton), a tím pádem služby zaregistrované jako *'Scoped'* budou vyhazovat exception typu:
 
 >***System.InvalidOperationException: ‘Cannot consume scoped service ‘Service’ from singleton ‘Microsoft.Extensions.Hosting.IHostedService’.***
 
