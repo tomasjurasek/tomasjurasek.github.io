@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IHostedService - závislosti služeb typu 'Scoped'
+title: IHostedService - problém se závislostí služeb typu 'Scoped'
 ---
 
 [Hosted služby](https://docs.microsoft.com/cs-cz/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/background-tasks-with-ihostedservice) slouží pro zpracovávání dlouhotrvajících úloh na pozadí kontextu aplikace. 
