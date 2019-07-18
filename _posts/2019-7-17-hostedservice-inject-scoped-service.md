@@ -6,7 +6,7 @@ title: IHostedService - závislosti služeb zaregistrovaných jako Scoped
 [Hosted služby](https://docs.microsoft.com/cs-cz/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/background-tasks-with-ihostedservice) slouží pro zpracovávání dlouhotrvajících úloh na pozadí kontextu aplikace. 
 
 Pro vytvoření hosted service je potřeba aby třída dědila z [IHostedService]((https://docs.microsoft.com/cs-cz/dotnet/api/microsoft.extensions.hosting.ihostedservice?view=aspnetcore-2.2)), nebo přímo z [BackgroundService](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.hosting.backgroundservice?view=aspnetcore-2.2).
-Poté třídu zaregistrujete jako hosted service:
+Poté třídu zaregistrujeme jako hosted service:
 ```cs
 services.AddHostedService<T>();
 ```
