@@ -9,7 +9,7 @@ permalink: /training/
 - Přechod z .NET Frameworku na .NET Core
 - Microservices architektura
 
-Pokud jste zde nenašli téma o které máte zájem, tak mi napiště a připravíme ho na míru pro Vás.
+Pokud jste zde nenašli téma, o které máte zájem, tak mi napiště.
 
 
 ### Kontakt
