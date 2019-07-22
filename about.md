@@ -4,7 +4,7 @@ title: O mě
 permalink: /about/
 ---
 
-[Jsem vývojář, konzultant](https://www.linkedin.com/in/tomasjurasek/), který se zabývá .NET technologiemi.
+[Jsem vývojář a konzultant](https://www.linkedin.com/in/tomasjurasek/), který se zabývá .NET technologiemi.
 Příbližně od roku 2014 jsem součástí komunity [Microsoft Student Partner](https://studentpartners.microsoft.com/cs-cz), kde se podílím na různých konferencích, 
 akcích a propagaci Microsoft technologií. 
 
