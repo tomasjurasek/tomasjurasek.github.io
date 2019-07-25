@@ -13,7 +13,7 @@ Lokalita: Brno
 Délka kurzu: 6h  
 Osnova:  
 1. Porovnání .NET Core vs .NET Framework
-2. NET Standard
+2. .NET Standard
 3. Struktura ASP.NET Core  
    * Práce s konfigurací
    * Práce s middlewares
