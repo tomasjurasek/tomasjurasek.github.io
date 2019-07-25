@@ -22,7 +22,7 @@ Osnova:
 4. Vývoj vlastní aplikace 
 5. Diskuze
 
-Pokud máte o kuru zájem, přihlaste se pomocí emailu.
+Pokud máte o kurz zájem, přihlaste se pomocí emailu.
 
 
 
