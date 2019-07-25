@@ -7,7 +7,7 @@ permalink: /training/
 **Úvod do ASP.NET Core**
 
 Termín : 6.9.2019  
-Kapacita 6-8 lidí  
+Kapacita: 6-8 lidí  
 Cena: 1300Kč  
 Lokalita: Brno  
 Délka kurzu: 6h  
@@ -17,7 +17,8 @@ Osnova:
 3. Struktura ASP.NET Core  
    * Práce s konfigurací
    * Práce s middlewares
-   * Použítí Dependency Injection
+   * Použítí dependency Injection  
+   * Hosted services a jiné ...
 4. Vývoj vlastní aplikace 
 5. Diskuze
 
