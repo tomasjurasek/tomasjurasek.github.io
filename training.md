@@ -22,7 +22,7 @@ Osnova:
 4. Vývoj vlastní aplikace 
 5. Diskuze
 
-Pokud máte o kurz zájem, přihlaste se pomocí emailu.
+Pokud máte o kurz zájem, přihlaste se pomocí [emailu](mailto:jurasek.tomas@hotmail.cz?subject=Prihlaska-ASP.NET-Core).
 
 
 
@@ -36,9 +36,9 @@ Témata, o kterých mám co říct.
 - Přechod z .NET Frameworku na .NET Core
 - Microservices architektura
 
-Pokud jste zde nenašli téma, o které máte zájem, tak mi napiště.
+Pokud jste zde nenašli téma, o které máte zájem, tak mi napište.
 
 
 ### Kontakt
 
-[jurasek.tomas@hotmail.cz](jurasek.tomas@hotmail.cz)
+[jurasek.tomas@hotmail.cz](mailto:jurasek.tomas@hotmail.cz?subject=Prihlaska-ASP.NET-Core)
