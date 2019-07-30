@@ -7,7 +7,7 @@ permalink: /training/
 **Úvod do ASP.NET Core**
 
 Termín : 6.9.2019  
-Kapacita: 6-8 lidí  
+Kapacita: 6 - 8 lidí  
 Cena: 1300Kč  
 Lokalita: Brno  
 Délka kurzu: 6h  
@@ -22,7 +22,7 @@ Osnova:
 4. Vývoj vlastní aplikace 
 5. Diskuze
 
-Pokud máte o kurz zájem, přihlaste se pomocí [emailu](mailto:jurasek.tomas@hotmail.cz?subject=Prihlaska-ASP.NET-Core).
+Pokud máte o kurz zájem, přihlaste se na portálu [.NET College](https://www.dotnetcollege.cz/kurz/1075/Uvod-do-ASP-NET-Core).
 
 
 
