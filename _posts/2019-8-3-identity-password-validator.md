@@ -40,7 +40,7 @@ public class UserNamePasswordValidator : IPasswordValidator<User>
 ```
 
 
-Následné validátor musíme zaregistrovat do identity pipeline.
+Následně validátor musíme zaregistrovat do identity pipeline.
 ```cs
 services.AddIdentity<User, Role>()
         .AddPasswordValidator<UserNamePasswordValidator>();
