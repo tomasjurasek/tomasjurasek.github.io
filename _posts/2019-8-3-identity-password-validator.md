@@ -3,7 +3,8 @@ layout: post
 title: ASP.NET Core Identity - pravidla pro tvorbu hesla
 ---
 
-[ASP.NET Core Identity](https://docs.microsoft.com/cs-cz/aspnet/core/security/?view=aspnetcore-2.2) slouží pro správú uživatelů, identity a rolí ve vaší ASP.NET aplikaci. Systém nabízí základní sadu pravidel, které je možné nastavit v [IdentityOptions](https://bit.ly/2yyUjkj). Základní pravidla pro se nachází v [PasswordOptions](https://bit.ly/2yAK92G)
+[ASP.NET Core Identity](https://docs.microsoft.com/cs-cz/aspnet/core/security/?view=aspnetcore-2.2) slouží pro správú uživatelů, identity a rolí ve vaší ASP.NET aplikaci. Systém nabízí základní sadu pravidel, které je možné nastavit v [IdentityOptions](https://github.com/aspnet/AspNetCore/blob/bfec2c14be1e65f7dd361a43950d4c848ad0cd35/src/Identity/Extensions.Core/src/IdentityOptions.cs). Základní pravidla pro se nachází v [PasswordOptions](https://github.com/aspnet/AspNetCore/blob/44e68134528e3095064dc04bcb44effab3cb52df/src/Identity/Extensions.Core/src/PasswordOptions.cs) - minimální délka hesla, povolené znaky, musí obsahovat číslo,...
+
 Tyto pravidla můžeme upravovat přímo u registrace [ASP.NET Core Identity](https://docs.microsoft.com/cs-cz/aspnet/core/security/?view=aspnetcore-2.2).
 
 ```cs
@@ -13,9 +14,9 @@ services.AddIdentity<User, Role>(options =>
     ...
 });
 ```
-Pravidla potom zpracovávají tzv validátory. Pro validaci hesla systém nabízí defaulní implementaci [PasswordValidator<TUser>](https://bit.ly/2MF4DiX), kde se tyhle pravidla aplikují.
+Pravidla potom zpracovávají tzv validátory. Pro validaci hesla systém nabízí defaulní implementaci [PasswordValidator\<TUser>](https://github.com/aspnet/AspNetCore/blob/bfec2c14be1e65f7dd361a43950d4c848ad0cd35/src/Identity/Extensions.Core/src/PasswordValidator.cs), kde se tyhle pravidla aplikují.
 
-Pokud potřebujete pravidlo pro validování hesla, které identity systém nenabízí, můžete využít interface [IPasswordValidator<TUser>](https://bit.ly/2KjSnBI) a naimplementovat si vlastní pravidlo.
+Pokud potřebujete pravidlo pro validování hesla, které identity systém nenabízí, můžete využít interface [IPasswordValidator\<TUser>](https://github.com/aspnet/AspNetCore/blob/bfec2c14be1e65f7dd361a43950d4c848ad0cd35/src/Identity/Extensions.Core/src/IPasswordValidator.cs) a naimplementovat si vlastní pravidlo.
 
 
 ***Příklad*** - chceme mít validaci pro heslo, které zakáže, aby heslo bylo stejné jako username.
