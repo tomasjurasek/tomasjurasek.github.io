@@ -14,7 +14,7 @@ services.AddIdentity<User, Role>(options =>
     ...
 });
 ```
-Pravidla potom zpracovávají tzv validátory. Pro validaci hesla systém nabízí defaulní implementaci [PasswordValidator\<TUser>](https://github.com/aspnet/AspNetCore/blob/bfec2c14be1e65f7dd361a43950d4c848ad0cd35/src/Identity/Extensions.Core/src/PasswordValidator.cs), kde se tyhle pravidla aplikují.
+Pravidla potom zpracovávají tzv. validátory. Pro validaci hesla systém nabízí defaulní implementaci [PasswordValidator\<TUser>](https://github.com/aspnet/AspNetCore/blob/bfec2c14be1e65f7dd361a43950d4c848ad0cd35/src/Identity/Extensions.Core/src/PasswordValidator.cs), kde se tyhle pravidla aplikují.
 
 Pokud potřebujete pravidlo pro validování hesla, které identity systém nenabízí, můžete využít interface [IPasswordValidator\<TUser>](https://github.com/aspnet/AspNetCore/blob/bfec2c14be1e65f7dd361a43950d4c848ad0cd35/src/Identity/Extensions.Core/src/IPasswordValidator.cs) a naimplementovat si vlastní pravidlo.
 
