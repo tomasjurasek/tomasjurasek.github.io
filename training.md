@@ -8,7 +8,7 @@ permalink: /training/
 
 Termín : říjen 2019  
 Kapacita: 5 lidí  
-Cena: 2500Kč + DPH
+Cena: 2500Kč + DPH  
 Lokalita: Brno  
 Délka kurzu: 6h  
 Osnova:  
