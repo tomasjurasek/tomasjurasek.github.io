@@ -6,23 +6,25 @@ permalink: /training/
 
 **Úvod do ASP.NET Core**
 
-Termín : 6.9.2019  
-Kapacita: 6 - 8 lidí  
-Cena: 1300Kč  
+Termín : říjen 2019  
+Kapacita: 5 lidí  
+Cena: 2500Kč + DPH
 Lokalita: Brno  
 Délka kurzu: 6h  
 Osnova:  
-1. Porovnání .NET Core vs .NET Framework
-2. .NET Standard
+1. .Shrnutí .NET Framework
+2. .NET Core
+3. .NET Standard
 3. Struktura ASP.NET Core  
-   * Práce s konfigurací
-   * Práce s middlewares
-   * Použítí dependency Injection  
+   * Konfigurace aplikace
+   * Vysvětlení Middlewares
+   * Práce s dependency Injection  
+   * Logování
+   * Jak správně pracovat s HttpClient
    * Hosted services a jiné ...
 4. Vývoj vlastní aplikace 
 5. Diskuze
 
-Pokud máte o kurz zájem, přihlaste se na portálu [.NET College](https://www.dotnetcollege.cz/kurz/1075/Uvod-do-ASP-NET-Core).
 
 
 
@@ -41,4 +43,4 @@ Pokud jste zde nenašli téma, o které máte zájem, tak mi napište.
 
 ### Kontakt
 
-[jurasek.tomas@hotmail.cz](mailto:jurasek.tomas@hotmail.cz?subject=Prihlaska-ASP.NET-Core)
+[jurasek.tomas@hotmail.cz](mailto:jurasek.tomas@hotmail.cz)
