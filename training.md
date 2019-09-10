@@ -18,7 +18,7 @@ Osnova:
 3. Struktura ASP.NET Core  
    * Konfigurace aplikace
    * Vysvětlení Middlewares
-   * Práce s dependency Injection  
+   * Práce s Dependency Injection  
    * Logování
    * Jak správně pracovat s HttpClient
    * Hosted services a jiné ...
