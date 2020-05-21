@@ -7,7 +7,7 @@ Určitě jste se s podobnou situaci už setkali nesčetněkrát při psaní unit
 
 Dnes si ukážeme jak namockovat HTTP závislost pro unit testy. Pro mockování budeme používat framework [NSubstitude](https://nsubstitute.github.io/).
 
-ASP.NET Core nabízí [mechanismus](https://docs.microsoft.com/cs-cz/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1) pro práce s Http clientem - nemusíte se starat o jeho životní cyklus sami, ale vše vyřesí interní implementace IHttpClientFactory.
+ASP.NET Core nabízí [mechanismus](https://docs.microsoft.com/cs-cz/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1) pro práce s http clientem - nemusíte se starat o jeho životní cyklus sami, ale vše vyřesí interní implementace IHttpClientFactory.
 
 ### Registrace IHttpClientFactory
 Pro používání IHttpClientFactory stačí do služeb vaší aplikace zaregistrovat tenhle kousek kódu.
