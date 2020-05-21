@@ -48,7 +48,9 @@ var fakeHttpMessageHandler = new FakeHttpMessageHandler(new HttpResponseMessage(
 {
     StatusCode = HttpStatusCode.OK,
 });
+
 var httpClient = new HttpClient(fakeHttpMessageHandler);
+
 httpClientFactoryMock.CreateClient().Returns(httpClient);
 ```
 
