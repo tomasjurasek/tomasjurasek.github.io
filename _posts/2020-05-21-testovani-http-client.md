@@ -17,7 +17,7 @@ services.AddHttpClient();
 
 Poté kdekoliv v aplikaci si můžete vyžádat IHttpClientFactory službu pomocí DI, která obsahuje metodu .CreateClient() pro získání HttpClienta.
 
-### Jak testovat IHttpClientFactory
+### Mockování IHttpClientFactory
 Namockujeme si službu IHttpClientFactory pomocí mockovacího frameworku [NSubstitude](https://nsubstitute.github.io/).
 ```cs
  var httpClientFactoryMock = Substitute.For<IHttpClientFactory>();
