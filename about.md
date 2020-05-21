@@ -8,8 +8,8 @@ permalink: /about/
 Příbližně od roku 2014 jsem součástí komunity [Microsoft Student Partner](https://studentpartners.microsoft.com/cs-cz), kde se podílím na různých konferencích, 
 akcích a propagaci Microsoft technologií. 
 
-Mám zkušenosti s vývojem a provozem velkých distribuovaných systémů postavených na microservices architektuře a refactoringu starých legacy systémů. 
-Momentálně pracuji jako Software Architekt na projektech pod společností [Riganti](https://www.riganti.cz/).
+Mám zkušenosti s vývojem a provozem velkých distribuovaných systémů postavených na microservices architektuře a refactoringu starých legacy systémů.
+
 
 O problémech, které při návrhu a vývoji řeším, rád píšu na svém [blogu](https://www.tomasjurasek.net).
 
