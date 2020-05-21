@@ -50,8 +50,8 @@ var fakeHttpMessageHandler = new FakeHttpMessageHandler(new HttpResponseMessage(
 });
 var httpClient = new HttpClient(fakeHttpMessageHandler);
 httpClientFactoryMock.CreateClient().Returns(httpClient);
-
 ```
+
 A jako poslední krok zbývá vložit namockovanou instanci IHttpClientFactory do služby, kterou chcete testovat.
 
 
