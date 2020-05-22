@@ -48,6 +48,7 @@ Poté stačí tuhle fake implementaci podstrčit namockované `IHttpClientFactor
 var fakeHttpMessageHandler = new FakeHttpMessageHandler(new HttpResponseMessage() 
 {
     StatusCode = HttpStatusCode.OK,
+    Content = new StringContent("OK!") // Zde si můžete serializovat objekt, který očekáváte.
 });
 
 var httpClient = new HttpClient(fakeHttpMessageHandler);
