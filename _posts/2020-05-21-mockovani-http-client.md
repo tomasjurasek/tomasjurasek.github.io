@@ -3,7 +3,7 @@ layout: post
 title: ASP.NET Core - mockování HTTP závislostí v unit testech
 ---
 
-Určitě jste se s podobnou situací setkali už nesšetněkrát - potřebujete napsat unit testy pro nějakou servisu/službu ve vaší aplikaci, ale služba obsahuje další závislosti. Například volá databázi, HTTP požadavky, pracuje se souborovým systémem a jiné.
+Určitě jste se s podobnou situací setkali už nesčetněkrát - potřebujete napsat unit testy pro nějakou servisu/službu ve vaší aplikaci, ale služba obsahuje další závislosti. Například volá databázi, HTTP požadavky, pracuje se souborovým systémem a jiné.
 
 V tomhle článku si ukážeme, jak namockovat HTTP závislosti pro lepší izolaci testované služby.
 
@@ -16,7 +16,7 @@ Pro registraci `IHttpClientFactory`, stačí zaregistrovat službu pomocí exten
 services.AddHttpClient();
 ```
 
-Poté kdekoliv v aplikaci si můžete vyžádat `IHttpClientFactory` službu pomocí DI. Služba obsahuje metodu `.CreateClient()`, která vrací instanci  `HttpClient `.
+Poté kdekoliv v aplikaci si můžeme vyžádat `IHttpClientFactory` službu pomocí DI. Služba obsahuje metodu `.CreateClient()`, která vrací instanci  `HttpClient `.
 
 ### Mockování IHttpClientFactory
 Namockujeme si službu `IHttpClientFactory` pomocí mockovacího frameworku [NSubstitude](https://nsubstitute.github.io/).
@@ -56,6 +56,6 @@ var httpClient = new HttpClient(fakeHttpMessageHandler);
 httpClientFactoryMock.CreateClient().Returns(httpClient);
 ```
 
-A jako poslední krok zbývá vložit namockovanou instanci `IHttpClientFactory` do služby, kterou chcete testovat.
+A jako poslední krok zbývá vložit namockovanou instanci `IHttpClientFactory` do služby, kterou chceme testovat.
 
 
