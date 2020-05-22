@@ -16,7 +16,7 @@ Pro registraci `IHttpClientFactory`, stačí zaregistrovat službu pomocí exten
 services.AddHttpClient();
 ```
 
-Poté kdekoliv v aplikaci si můžete vyžádat `IHttpClientFactory` službu pomocí DI. Služba obsahuje metodu `.CreateClient()`, která vrátí instanci HttpClient.
+Poté kdekoliv v aplikaci si můžete vyžádat `IHttpClientFactory` službu pomocí DI. Služba obsahuje metodu `.CreateClient()`, která vrací instanci  `HttpClient `.
 
 ### Mockování IHttpClientFactory
 Namockujeme si službu `IHttpClientFactory` pomocí mockovacího frameworku [NSubstitude](https://nsubstitute.github.io/).
