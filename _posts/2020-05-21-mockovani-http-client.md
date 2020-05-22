@@ -8,7 +8,7 @@ Určitě jste se s podobnou situací setkali už nesšetněkrát - potřebujete 
 V tomhle článku si ukážeme, jak se zbavit/namockovat HTTP závislosti pro lepší izolaci testované služby.
 
 
-ASP.NET Core nabízí [mechanismus](https://docs.microsoft.com/cs-cz/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1) pro práce s http clientem - nemusíte se starat o jeho životní cyklus sami, ale vše vyřesí interní implementace IHttpClientFactory.
+ASP.NET Core nabízí [mechanismus](https://docs.microsoft.com/cs-cz/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1) pro práce s HttpClient - nemusíte se starat o jeho životní cyklus sami, ale vše vyřesí interní implementace IHttpClientFactory.
 
 ### Registrace IHttpClientFactory
 Pro registraci IHttpClientFactory, stačí zaregistrovat službu pomocí extension metody .AddHttpClient(), která zaregistruje veškeré závislosti.
@@ -16,7 +16,7 @@ Pro registraci IHttpClientFactory, stačí zaregistrovat službu pomocí extensi
 services.AddHttpClient();
 ```
 
-Poté kdekoliv v aplikaci si můžete vyžádat IHttpClientFactory službu pomocí DI. IHttpClientFactory obsahuje metodu .CreateClient(), která vrátí instanci HttpClienta.
+Poté kdekoliv v aplikaci si můžete vyžádat IHttpClientFactory službu pomocí DI. IHttpClientFactory obsahuje metodu .CreateClient(), která vrátí instanci HttpClient.
 
 ### Mockování IHttpClientFactory
 Namockujeme si službu IHttpClientFactory pomocí mockovacího frameworku [NSubstitude](https://nsubstitute.github.io/).
