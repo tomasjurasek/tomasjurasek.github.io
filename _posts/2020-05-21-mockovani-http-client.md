@@ -11,12 +11,12 @@ V tomhle článku si ukážeme jak se zbavit/namockovat HTTP závislosti pro lep
 ASP.NET Core nabízí [mechanismus](https://docs.microsoft.com/cs-cz/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1) pro práce s http clientem - nemusíte se starat o jeho životní cyklus sami, ale vše vyřesí interní implementace IHttpClientFactory.
 
 ### Registrace IHttpClientFactory
-Pro používání IHttpClientFactory stačí do služeb vaší aplikace zaregistrovat tenhle kousek kódu.
+Pro registraci IHttpClientFactory, stačí zaregistrovat službu pomocí extension metody .AddHttpClient(), která zaregistruje veškeré závislosti.
 ```cs
 services.AddHttpClient();
 ```
 
-Poté kdekoliv v aplikaci si můžete vyžádat IHttpClientFactory službu pomocí DI, která obsahuje metodu .CreateClient() pro získání HttpClienta.
+Poté kdekoliv v aplikaci si můžete vyžádat IHttpClientFactory službu pomocí DI. IHttpClientFactory obsahuje metodu .CreateClient(), která vrátí instanci HttpClienta.
 
 ### Mockování IHttpClientFactory
 Namockujeme si službu IHttpClientFactory pomocí mockovacího frameworku [NSubstitude](https://nsubstitute.github.io/).
