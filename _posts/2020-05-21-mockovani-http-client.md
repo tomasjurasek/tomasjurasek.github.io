@@ -3,9 +3,8 @@ layout: post
 title: ASP.NET Core - mockování HTTP závislostí v unit testech
 ---
 
-Určitě jste se s podobnou situaci už setkali nesčetněkrát při psaní unit testů. Aplikace obsahuje několik závislostí, a některé závistosti jdou mimo vaší aplikaci - databáze, HTTP požadavky,..
+Určitě jste se s podobnou situací setkali už nesšetněkrát - potřebujete napsat unit testy pro nějakou servisu/službu ve vaší aplikaci, ale služba má další závislosti na databázi, HTTP požadavky a mnoho dalších. V tomhle článku si ukážeme jak se zbavit/namockovat HTTP závislosti pro lepší izolaci testované služby.
 
-Dnes si ukážeme jak namockovat HTTP závislost pro unit testy. Pro mockování budeme používat framework [NSubstitude](https://nsubstitute.github.io/).
 
 ASP.NET Core nabízí [mechanismus](https://docs.microsoft.com/cs-cz/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1) pro práce s http clientem - nemusíte se starat o jeho životní cyklus sami, ale vše vyřesí interní implementace IHttpClientFactory.
 
