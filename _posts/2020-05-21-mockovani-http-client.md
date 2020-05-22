@@ -8,23 +8,23 @@ Určitě jste se s podobnou situací setkali už nesšetněkrát - potřebujete 
 V tomhle článku si ukážeme, jak se zbavit/namockovat HTTP závislosti pro lepší izolaci testované služby.
 
 
-ASP.NET Core nabízí [mechanismus](https://docs.microsoft.com/cs-cz/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1) pro práce s HttpClient - nemusíte se starat o jeho životní cyklus sami, ale vše vyřesí interní implementace IHttpClientFactory.
+ASP.NET Core nabízí [mechanismus](https://docs.microsoft.com/cs-cz/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1) pro práce s `HttpClient` - nemusíte se starat o jeho životní cyklus sami, ale vše vyřesí interní implementace `IHttpClientFactory`.
 
 ### Registrace IHttpClientFactory
-Pro registraci IHttpClientFactory, stačí zaregistrovat službu pomocí extension metody .AddHttpClient(), která zaregistruje veškeré závislosti.
+Pro registraci `IHttpClientFactory`, stačí zaregistrovat službu pomocí extension metody `.AddHttpClient()`, která zaregistruje veškeré závislosti.
 ```cs
 services.AddHttpClient();
 ```
 
-Poté kdekoliv v aplikaci si můžete vyžádat IHttpClientFactory službu pomocí DI. IHttpClientFactory obsahuje metodu .CreateClient(), která vrátí instanci HttpClient.
+Poté kdekoliv v aplikaci si můžete vyžádat `IHttpClientFactory` službu pomocí DI. IHttpClientFactory obsahuje metodu `.CreateClient()`, která vrátí instanci HttpClient.
 
 ### Mockování IHttpClientFactory
-Namockujeme si službu IHttpClientFactory pomocí mockovacího frameworku [NSubstitude](https://nsubstitute.github.io/).
+Namockujeme si službu `IHttpClientFactory` pomocí mockovacího frameworku [NSubstitude](https://nsubstitute.github.io/).
 ```cs
  var httpClientFactoryMock = Substitute.For<IHttpClientFactory>();
  ```
 
- Dále si naimplementujeme fake implementaci DelegatingHandler, který se stará o o zpracování requestu a vrací příslušný response.
+ Dále si naimplementujeme fake implementaci `DelegatingHandler`, který se stará o o zpracování requestu a vrací příslušný response.
 
 ```cs
 public class FakeHttpMessageHandler : DelegatingHandler
@@ -43,7 +43,7 @@ public class FakeHttpMessageHandler : DelegatingHandler
 }
 ```
 
-Poté stačí tuhle fake implementaci podstrčit namockované IHttpClientFactory.
+Poté stačí tuhle fake implementaci podstrčit namockované `IHttpClientFactory`.
 ```cs
 var fakeHttpMessageHandler = new FakeHttpMessageHandler(new HttpResponseMessage() 
 {
@@ -55,6 +55,6 @@ var httpClient = new HttpClient(fakeHttpMessageHandler);
 httpClientFactoryMock.CreateClient().Returns(httpClient);
 ```
 
-A jako poslední krok zbývá vložit namockovanou instanci IHttpClientFactory do služby, kterou chcete testovat.
+A jako poslední krok zbývá vložit namockovanou instanci `IHttpClientFactory` do služby, kterou chcete testovat.
 
 
