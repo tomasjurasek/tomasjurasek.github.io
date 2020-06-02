@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modernizace aplikací #1
+title: Modernizace aplikací - Úvod
 ---
 
 Mikroslužby,  kálovatelné distribuované systémy běžící v docker konteinerech v Kubernetees.
