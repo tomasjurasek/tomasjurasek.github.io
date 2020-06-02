@@ -7,7 +7,7 @@ Mikroslužby, škálovatelné distribuované systémy běžící v docker kontei
 
 Tohle se v poslední době oběvuje v článcích jako jediná možné cesta jak modernizovat Vaše aplikace. Nic ale není *černobíle*, ani problematika modernizace a refaktoringu.
 
-> Každý systém *nemůže* být postavený na mikroslužbách. Ani by neměl.
+> Každý systém *nemůže* být postavený na mikroslužbách. A ani by neměl.
 
 Mikroslužby jsou jen špička ledovce, které se hodí na malé procentu všech technologických projektů - kritické scénáře.
 
