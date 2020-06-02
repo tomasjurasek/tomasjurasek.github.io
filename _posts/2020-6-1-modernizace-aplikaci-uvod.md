@@ -17,5 +17,5 @@ Pokud se Vám daří zůstat střízlivý ohledně přepisu do mikroslužeb, tak
 
 > Není kam spěchat. Podle cyklu technologií, se může stát, že za pár let bude trendy mít monolith hostovaný na vlastních serverech.
 
-Postupně si budeme ukazovat možné příklady jak se postavit čelem k modernizaci Vašich systémů.
+Postupně si budeme ukazovat možné příklady jak se postavit čelem k modernizaci Vašich systémů a nepropálit natom majlant.
 
