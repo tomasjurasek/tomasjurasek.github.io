@@ -15,7 +15,7 @@ Mikroslužby jsou jen špička ledovce, které se hodí na malé procentu všech
 
 > Je potřeba myslet i na těch 90% systémů, které se nachází pod hladinou ledovce.
 
-Zkuste nepodlehnout tlaku nejnovějších technologii a držet se v kontextu Vašeho businessu. Myslete na budoucnost, aby nebylo třeba Váš systém znovu za pár let přepisovat. Jako nedávno zahlásil Uber, že mikroslužby pro ně jsou dost velké sousto (mají cca 4000 mikroslužeb) - [odkaz](http://highscalability.com/blog/2020/4/8/one-team-at-uber-is-moving-from-microservices-to-macroservic.html).
+Zkuste nepodlehnout tlaku nejnovějších technologii a držet se v kontextu Vašeho businessu. Myslete na budoucnost, aby nebylo třeba Váš systém znovu za pár let přepisovat. Jako nedávno zahlásil Uber, že mikroslužby pro ně jsou dost velké sousto (cca 4000 mikroslužeb) - [odkaz](http://highscalability.com/blog/2020/4/8/one-team-at-uber-is-moving-from-microservices-to-macroservic.html).
 
 
 Není kam spěchat. Podle cyklu technologií, se může stát, že za pár let bude trendy mít monolith hostovaný na vlastním serveru.
