@@ -3,7 +3,7 @@ layout: post
 title: Modernizace aplikací - Úvod
 ---
 
-Mikroslužby, škálovatelné distribuované systémy běžící v docker konteinerech v Kubernetes.
+Mikroslužby, škálovatelné distribuované systémy běžící v docker kontejnerech v Kubernetes.
 
 Tohle se v poslední době objevuje v článcích jako jediná možné cesta jak modernizovat Vaše aplikace. Nic ale není *černobíle*, ani problematika modernizace a refaktoringu.
 
