@@ -8,7 +8,7 @@ We had a problem with one of our services that received and processed messages i
 
 You can do a lot of mistakes in a Service Bus - Queue/Topics set up.
 
-* [Partitioning](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-partitioning#how-it-works) - when you enable this option you need to put a *PartitionKey* into your message that you send. If you don't do this, the internal algorithm creates some *PartitionKey* and store the message to the partition by the generated *PartitionKey*. Then, when you want to receive the messages, then Service Bus queries all partitions for messages and then returns the first message that is obtained from any of the partitions to the receiver. **That was the problem we had.**
+* [Partitioning](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-partitioning#how-it-works) - when you enable this option you need to put a *PartitionKey* into your message that you send. If you don't do this, the internal algorithm creates some *PartitionKey* and store the message to the partition by the generated *PartitionKey*. Then, when you want to receive the messages, then Service Bus queries all partitions for messages and then returns the first message that is obtained from any of the partitions to the receiver. **That was the problem we had - missing a PartitionKey.**
 
 * [Duplicate detection](https://docs.microsoft.com/en-us/azure/service-bus-messaging/duplicate-detection) - when you enable this option you have a 'sliding window' where the messages are detected from duplication by the *MessageId* property. Also when you have enabled Partitioning and you don't have a *PartitionKey* property, the *MessageId* property serves as a *PartitionKey*.
 
