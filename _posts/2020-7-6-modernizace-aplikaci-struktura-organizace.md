@@ -20,5 +20,9 @@ Tahle struktura vyprodukuje většinou systémy, které reprezentují samotnou o
 
 Pokud chcete doručit systém, který bude rozdělen do nezávislých modulů (mikroslužeb) je potřeba poskládat týmy, které budou reprezentovat nezávislé jednotky a obsahovat veškeré specialisty na danou doménu.
 
-
+Pokud je cíl organizace vybudovat "nezávislé" moduly (mikroslužby) aplikace, které budou mezi sebou komunikovat, tak bez reorganizace a nezávislosti samotných týmu to nebude pravděpodobně proveditelné. Každý modul (mikroslužby) by měl  obsahovat potřebné specialisty, kteří spolu dodají celek.
 ![Struktura Organizace](/images/posts/modernizace-struktura-organizace/struktura-business.jpg)
+
+
+
+Organizace většinou mají představu o tom, jak by jejich artchitektura systému měla vypadat. Zapomínají ale nato, zda jsou jejich týmy přizpůsobeny těmto představám - struktura týmu reflektuje architektonický směr.
