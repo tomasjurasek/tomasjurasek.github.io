@@ -7,7 +7,7 @@ Důležitou roli v modernizaci aplikace hraje samotná komunikační struktura o
 
 >"Organizace, které navrhují systémy jsou nuceny vytvářet návrhy, které jsou kopiemi komunikačních struktur těchno organizacích." - Conway, 1967
 
-Ve většině případá to znamená, že v organizaci jsou jednotlivé týmy postavené podle jejich specializace - FE, BE, DB ...
+Ve většině případů to znamená, že v organizaci jsou jednotlivé týmy postavené podle jejich specializace - FE, BE, DB ...
 
 
 ![Struktura Organizace](/images/posts/modernizace-struktura-organizace/struktura-org.jpg)
