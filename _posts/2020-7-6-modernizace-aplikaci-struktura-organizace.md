@@ -25,4 +25,4 @@ Každý modul (mikroslužba) by měl  obsahovat potřebné specialisty, kteří 
 
 
 
-Organizace většinou mají představu o tom, jak by jejich artchitektura systému měla vypadat. Zapomínají ale na to, zda jejich struktura týmu reflekture tuhle představu.
+Organizace většinou mají představu o tom, jak by jejich artchitektura systému měla vypadat. Zapomínají ale na to, zda jejich struktura týmu reflektuje tuhle představu.
