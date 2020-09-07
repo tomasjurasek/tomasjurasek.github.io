@@ -3,7 +3,13 @@ layout: post
 title: Azure Blob Storage - StartCopyFromUri
 ---
 
-Funkce `StartCopyFromUri` ve službě [Azure Blob Storage](https://docs.microsoft.com/cs-cz/azure/storage/blobs/storage-blobs-overview) slouží pro nepřímé kopírování vašich blobů v rámci jednotlivých Storage Accountů - tzv. pomocí odkazu na cizí Blob, můžete pomocí `StartCopyFromUri` zahájit asynchroní kopírování Blobu na váš Storage Account, který se děje na pozadí služby [Azure Blob Storage](https://docs.microsoft.com/cs-cz/azure/storage/blobs/storage-blobs-overview). Stav kopírovaného Blobu potom jen můžete kontrolovat pomocí proměnné `CopyStatus`, která znázorňuje stav.
+Funkce `StartCopyFromUri` ve službě [Azure Blob Storage](https://docs.microsoft.com/cs-cz/azure/storage/blobs/storage-blobs-overview) slouží pro nepřímé kopírování vašich blobů v rámci jednotlivých Storage Accountů - tzv. pomocí odkazu na cizí Blob, můžete pomocí `StartCopyFromUri` zahájit asynchroní kopírování Blobu na váš Storage Account, který se děje na pozadí služby [Azure Blob Storage](https://docs.microsoft.com/cs-cz/azure/storage/blobs/storage-blobs-overview). 
+
+Stav kopírovaného Blobu potom jen můžete kontrolovat pomocí proměnné `CopyStatus`, která znázorňuje stav.
+
+Dále můžete pracovat s metodama
+* [SyncCopyFromUriAsync](https://docs.microsoft.com/en-us/dotnet/api/azure.storage.blobs.specialized.blobbaseclient.synccopyfromuriasync?view=azure-dotnet)
+* [AbortCopyFromUriAsync](https://docs.microsoft.com/en-us/dotnet/api/azure.storage.blobs.specialized.blobbaseclient.abortcopyfromuriasync?view=azure-dotnet)
 
 
 ```cs
