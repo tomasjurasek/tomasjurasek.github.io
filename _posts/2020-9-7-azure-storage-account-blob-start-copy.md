@@ -31,6 +31,7 @@ namespace AzureStorageBlobCopy
             var blobServiceClient = new BlobServiceClient(connectionString);
             var blobContainerClient = await blobServiceClient.CreateBlobContainerAsync(containerName);
             var blobClient = blobContainerClient.Value.GetBlobClient(blobName);
+            
             await blobClient.StartCopyFromUriAsync(new Uri(sourceBlobUrl));
 
             while (true)
