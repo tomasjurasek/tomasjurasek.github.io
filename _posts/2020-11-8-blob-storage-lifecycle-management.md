@@ -4,11 +4,11 @@ title: Azure Blob Storage - Lifecycle Management
 ---
 The [Lifecycle Management](https://azure.microsoft.com/cs-cz/blog/azure-blob-storage-lifecycle-management-now-generally-available/) is a feature of the [Blob Storage](https://docs.microsoft.com/en-US/azure/storage/blobs/storage-blobs-introduction) which can manage access tier or delete your blobs.
 
-This feature is used to optimize the pricing of your Blob Storage by changing the **Access Tier** or **Delete** your blobs. Pricing of the blob depends on the selected access tier.
+This feature is used to optimize the pricing of your Blob Storage by changing the **Access tier** or **Delete** your blobs. Pricing of the blob depends on the selected access tier.
 
 You can define a **rule** with a time period and a filter that can run the selected operations on your blobs.
 
-### Change the Access Tier
+### Change the Access tier
 
 A blob can contains one of these *access tiers*. 
 
