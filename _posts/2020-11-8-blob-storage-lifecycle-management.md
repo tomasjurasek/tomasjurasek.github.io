@@ -29,5 +29,5 @@ A blob can contains one of these *access tiers*.
 * $0,0018 per month for GB
 
 ### Delete
-Delete blobs by rule. This operation is free.
+Delete blobs by the rule. This operation is free.
 
