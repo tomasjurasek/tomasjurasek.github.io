@@ -10,7 +10,7 @@ You can define a **rule** with a time period and a filter that can run the selec
 
 ### Change the Access tier
 
-A blob can contains one of these *access tiers*. 
+A blob can contain one of these *access tiers*. 
 
 #### Hot 
 * High availability
@@ -20,7 +20,7 @@ A blob can contains one of these *access tiers*.
 #### Cool
 * Access to this tier of the blob can take some time
 * The blob must be stored for minimum 30 days
-* It Is used for the last backup or the not frequented blob
+* It is used for the last backup or the not frequented blob
 * $0,01 per month for GB
 
 #### Archive
