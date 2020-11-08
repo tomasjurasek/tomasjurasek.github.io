@@ -8,7 +8,7 @@ This feature is used to optimize the pricing of your Blob Storage by changing th
 
 You can define a **rule** with a time period and a filter that can run the selected operations on your blobs.
 
-### Change the Access Tier of the Blob 
+### Change the Access Tier
 
 A blob can contains one of these *access tiers*. 
 
@@ -28,6 +28,6 @@ A blob can contains one of these *access tiers*.
 * The blob must be stored for minimum 180 days
 * $0,0018 per month for GB
 
-### Delete Blob
+### Delete
 Delete blobs by rule. This operation is free.
 
