@@ -14,7 +14,7 @@ A blob can contain one of these *access tiers*.
 
 #### Hot 
 * High availability
-* It Is used for most frequently blob access
+* It is used for most frequently blob access
 * $0,0196 per month for GB
 
 #### Cool
