@@ -56,7 +56,7 @@ public class ArticleRepository
         var tableOperation = TableOperation.InsertOrMerge(articleEntity);
         var result = await _table.ExecuteAsync(tableOperation);
 
-        return ((Article)result.Result);
+        return (Article)result.Result;
     }
 }
 ```
