@@ -45,7 +45,7 @@ public class ArticleRepository
         return (Article)result.Result;
     }
 
-    public async Task<string> InsertOrMerge(string text)
+    public async Task<Article> InsertOrMerge(string text)
     {
         await _table.CreateIfNotExistsAsync();
         var articleEntity = new Article
@@ -57,7 +57,7 @@ public class ArticleRepository
         var tableOperation = TableOperation.InsertOrMerge(articleEntity);
         var result = await _table.ExecuteAsync(tableOperation);
 
-        return ((Article)result.Result).RowKey;
+        return ((Article)result.Result);
     }
 }
 ```
