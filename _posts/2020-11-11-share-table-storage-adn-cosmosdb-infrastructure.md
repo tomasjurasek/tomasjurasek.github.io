@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to migrate the Table Storage Entity into the Cosmos DB
+title: Share an infrastructure between the Table Storage and the Cosmos DB
 ---
 
-This is a tutorial which provides you step by step how to migrate your entities from the Table Storage into the Cosmos DB.
+This is a tutorial which provides you step by step how to share your infrastructure between the Table Storage and the Cosmos DB.
 
 > Note: Your Cosmos DB must be set up with the Table API.
 
