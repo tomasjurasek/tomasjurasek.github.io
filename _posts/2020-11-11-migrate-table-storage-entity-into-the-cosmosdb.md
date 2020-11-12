@@ -47,7 +47,6 @@ public class ArticleRepository
 
     public async Task<Article> InsertOrMerge(string text)
     {
-        await _table.CreateIfNotExistsAsync();
         var articleEntity = new Article
         {
             PartitionKey = _partitionKey,
