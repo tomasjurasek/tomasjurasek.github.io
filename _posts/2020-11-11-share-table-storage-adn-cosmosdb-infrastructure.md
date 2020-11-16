@@ -61,7 +61,7 @@ public class ArticleRepository
 }
 ```
 
-First of all we need to upgrade Azure Storage SDK to the newest SDK - because this old SDK is deprecated. The new Azure Storage SDK is called **Microsoft.Azure.Cosmos.Table** which shares the infrastructure and services with the Cosmos DB. There are no breaking changes so you need only remove the old SDK package and install the newest SDK.
+First of all we need to upgrade the Azure Storage SDK to the newest SDK - because this old SDK is deprecated. The new Azure Storage SDK is called **Microsoft.Azure.Cosmos.Table** which shares the infrastructure and services with the Cosmos DB. There are no breaking changes so you need only remove the old SDK package and install the newest SDK.
 
-Then when we want to start using the Cosmos DB just change the **connectionString** from Storage Account to Cosmos DB.
+Then when we want to start using the Cosmos DB just change the **connectionString** from the Storage Account to the Cosmos DB.
 
