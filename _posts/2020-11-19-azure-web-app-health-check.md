@@ -17,7 +17,7 @@ Also, you can change the maximum percent of how many instances can be recycled a
 
 
 ## How to set up and monitor
-You need to set Enabled and Path to the custom endpoint of your application.
+You need to set *Enable* and *Path* to the custom endpoint of your application.
 
 ![HealthCheck](/images/posts/health-check-1.PNG)
 
