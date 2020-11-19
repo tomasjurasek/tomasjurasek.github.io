@@ -9,7 +9,9 @@ The [health check](https://docs.microsoft.com/en-US/azure/azure-monitor/platform
 
 ## How it works
 
-By default, the health check pings all instances of the App Service. When the health check gets a five times status code different than 200-299 then the concrete instance will be recycled and the traffic will be turned to a different *health* instance.
+By default, the health check pings your custom endpoint at all instances of the App Service.
+
+ When the health check gets a five times status code different than 200-299 then the concrete instance will be recycled and the traffic will be turned to a different *health* instance.
 
 > For the correct recycling, your App Service plan must be scaled out to 2 or more instances.
 
