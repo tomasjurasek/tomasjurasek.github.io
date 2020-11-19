@@ -11,6 +11,8 @@ The [health check](https://docs.microsoft.com/en-US/azure/azure-monitor/platform
 
 By default, the health check pings all instances of the App Service. When the health check gets a five times status code different than 200-299 then the concrete instance will be recycled and the traffic will be turned to a different *health* instance.
 
+> For the correct recycling, your App Service plan must be scaled out to 2 or more instances.
+
 The rule of five failed health check you can change by the app setting **WEBSITE_HEALTHCHECK_MAXPINGFAILURES**, where the number of the failing ping must be between 2 and 10. The default value is 5.
 
 Also, you can change the maximum percent of how many instances can be recycled at the same time by the app setting **WEBSITE_HEALTHCHECK_MAXUNHEALTYWORKERPERCENT**, where the number must be between 0 and 100. The default value is 50.
