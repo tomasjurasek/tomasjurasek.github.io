@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scalability of the Azure Web App - Health check
+title: Scalability of the Azure App Service - Health check
 ---
 [Azure App Service](https://docs.microsoft.com/en-US/azure/app-service/overview) is the Azure Service, where you can host a web application. The Azure App Service provides you tons of features which can help you build a scalable cloud application.
 
