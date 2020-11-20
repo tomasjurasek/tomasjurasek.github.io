@@ -2,7 +2,7 @@
 layout: post
 title: Scalability of the Azure App Service - Health check
 ---
-[Azure App Service](https://docs.microsoft.com/en-US/azure/app-service/overview) is the Azure Service, where you can host a web application. The Azure App Service provides you tons of features which can help you build a scalable cloud application.
+The [Azure App Service](https://docs.microsoft.com/en-US/azure/app-service/overview) is the Azure Service, where you can host a web application. The Azure App Service provides you tons of features which can help you build a scalable cloud application.
 
 The [health check](https://docs.microsoft.com/en-US/azure/azure-monitor/platform/autoscale-get-started#health-check-path) is a feature of Azure App Service, which constantly pings the custom endpoint and monitors the response status code of your application. 
 
