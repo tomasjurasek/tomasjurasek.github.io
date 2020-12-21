@@ -7,12 +7,12 @@ Probably when you need to localize your application you need to set up some reso
 
 Then it can works like this:  
 `/en-US/Home/Index`  
-`/cz-CS/Home/Index`
+`/cs-CZ/Home/Index`
 
 But what about when you need to localize your routes and links too? 
 Something like this:  
 `/en-US/Home/Index`  
-`/cz-CS/Domu/Uvod`
+`/cs-CZ/Domu/Uvod`
 
 I've created the nuget package [AspNetCore.Mvc.Routing.Localization](https://www.nuget.org/packages/AspNetCore.Mvc.Routing.Localization) which offers to you localize your routes by the `LocalizedRouteAttribute` and links by the TagHelper `<localized-route ...></localized-route>`.
 
