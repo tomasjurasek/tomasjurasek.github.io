@@ -16,4 +16,4 @@ Something like this:
 
 I've created the nuget package [AspNetCore.Mvc.Routing.Localization](https://www.nuget.org/packages/AspNetCore.Mvc.Routing.Localization) which offers to you localize your routes by the `LocalizedRouteAttribute` and links by the tagHelper `<localized-route ...></localized-route>`.
 
-GitHub - https://github.com/tomasjurasek/AspNetCore.Mvc.Routing.Localization
+GitHub - [https://github.com/tomasjurasek/AspNetCore.Mvc.Routing.Localization](https://github.com/tomasjurasek/AspNetCore.Mvc.Routing.Localization)
