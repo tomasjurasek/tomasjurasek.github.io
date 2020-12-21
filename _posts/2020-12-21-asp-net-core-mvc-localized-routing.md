@@ -14,6 +14,6 @@ Something like this:
 `/en-US/Home/Index`  
 `/cs-CZ/Domu/Uvod`
 
-I've created the nuget package [AspNetCore.Mvc.Routing.Localization](https://www.nuget.org/packages/AspNetCore.Mvc.Routing.Localization) which offers to you localize your routes by the `LocalizedRouteAttribute` and links by the TagHelper `<localized-route ...></localized-route>`.
+I've created the nuget package [AspNetCore.Mvc.Routing.Localization](https://www.nuget.org/packages/AspNetCore.Mvc.Routing.Localization) which offers to you localize your routes by the `LocalizedRouteAttribute` and links by the tagHelper `<localized-route ...></localized-route>`.
 
 GitHub - https://github.com/tomasjurasek/AspNetCore.Mvc.Routing.Localization
