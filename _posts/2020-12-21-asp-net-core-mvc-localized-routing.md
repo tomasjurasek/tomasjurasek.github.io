@@ -3,13 +3,13 @@ layout: post
 title: ASP.NET Core 5 MVC - Localized routing & links
 ---
 
-Probably when you need to localize your application you need to set up some resource files and configure the [UseRequestLocalization](https://docs.microsoft.com/en-US/aspnet/core/fundamentals/localization?view=aspnetcore-5.0) with supported culture.
+When you need to localize your application you need to set up some resource files and configure the [UseRequestLocalization](https://docs.microsoft.com/en-US/aspnet/core/fundamentals/localization?view=aspnetcore-5.0) with the supported cultures.
 
 Then it can works like this:  
 `/en-US/Home/Index`  
 `/cs-CZ/Home/Index`
 
-But what about when you need to localize your routes and links too? 
+What about when you need to localize your routes and links too? 
 Something like this:  
 `/en-US/Home/Index`  
 `/cs-CZ/Domu/Uvod`
