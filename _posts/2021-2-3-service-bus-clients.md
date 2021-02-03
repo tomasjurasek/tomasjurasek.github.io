@@ -5,7 +5,7 @@ title: Azure Service Bus - Clients
 The [Azure Service Bus](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview) is a cloud message-based platform that offers you asynchronous communication between several applications by messages. The Azure Service Bus provides you several clients, where the functionality depends on what you need to:
 
 # SessionClient
-The [client](https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.servicebus.sessionclient?view=azure-dotnet) consumes messages from the sessions*. The sessions guarantee to consume messages in good sequence.
+The [client](https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.servicebus.sessionclient?view=azure-dotnet) consumes messages from the sessions*. The sessions guarantee to consume messages in good sequence, but with concurrent calls, this is not guaranteed.
 
 
 ## Sample
