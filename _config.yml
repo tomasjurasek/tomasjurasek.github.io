@@ -69,7 +69,7 @@ plugins:
 author:
   name   : "Tomas Jurasek"
   avatar : "/assets/images/bio-photo.jpg"
-  #bio    : "Ahoj,..."
+  bio    : ".NET Developer"
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
