@@ -23,4 +23,4 @@ Other important questions should be guided by domain experts and business stakeh
 
 Only then, and not before, should you consider implementation. It's really *easier, faster and cheaper* to do [Strategy Design of Domain-Driven Design](https://thedomaindrivendesign.io/what-is-strategic-design/) by domain, not by engineers.
 
-*If you want to go fast, do think right.*
+*If you want to go far, do things right.*
