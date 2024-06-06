@@ -66,7 +66,7 @@ There are two ways how to instrument.
 
 Automatic instrumentation can also enabled by `OpenTelemetry.Instrumentation.X` nuget packages that are specific per resource.
 
-For example, instruments for HTTP Request (In) and HttpClient Request (Out) are in the `OpenTelemetry.Instrumentation.AspNetCore` and `OpenTelemetry.Instrumentation.Http` packages, which also configures/propagates trace context through [Propagator API](https://opentelemetry.io/docs/specs/otel/context/api-propagators/) via HTTP Headers.  There are other packages to instrument some resources, such as SQL and Redis.
+For example, instruments for HTTP Request (In) and HttpClient Request (Out) are in the `OpenTelemetry.Instrumentation.AspNetCore` and `OpenTelemetry.Instrumentation.Http` packages, which also configures/propagates trace context through [Propagator API](https://opentelemetry.io/docs/specs/otel/context/api-propagators/) via HTTP Headers.  
 
  ```csharp
 builder.Services.AddOpenTelemetry()
