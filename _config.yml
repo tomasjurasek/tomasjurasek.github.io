@@ -120,10 +120,10 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# analytics:
-#   provider: "google-gtag"
-#   google:
-#     tracking_id: ""
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-QNBNPFV271"
 #     anonymize_ip: false # default
 
 # after_footer_scripts:
