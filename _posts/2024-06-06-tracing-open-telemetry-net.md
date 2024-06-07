@@ -7,11 +7,11 @@ title:  "Distributed Tracing in .NET with OpenTelemetry"
 
 ## OpenTelementry .NET Tracing API
 
-.NET runtime contains an `Activity` class, which is used for tracing purposes and represents a [Span](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#span) in the OpenTelemetry terminology. The `Activity` class is part of `System.Diagnostics.DiagnosticSource` package. 
+The .NET runtime contains an `Activity` class, which is used for tracing purposes and represents a [Span](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#span) in OpenTelemetry terminology. The `Activity` class is part of the `System.Diagnostics.DiagnosticSource` package. 
 
-This allows instrument applications to emit OpenTelemetry traces using the standard .NET Runtime.
+This allows applications to emit OpenTelemetry traces using the standard .NET Runtime.
 
-To align more closely with OpenTelemetry terminology (like tracer, span instead of activitySource, activity) in the application, use [OpenTelementry.API](https://www.nuget.org/packages/opentelemetry.api), which wraps the .NET `Activity` classes. 
+To align more closely with OpenTelemetry terminology (like tracer, span instead of activitySource, activity) in the application, use the [OpenTelementry.API](https://www.nuget.org/packages/opentelemetry.api), which wraps the .NET `Activity` classes. 
 
 
 ## Instrumenting .NET Application
