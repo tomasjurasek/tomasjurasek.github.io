@@ -5,7 +5,7 @@ title:  "Distributed Tracing in .NET with OpenTelemetry"
 
 [OpenTelemetry](https://opentelemetry.io/) brings a de-facto standard for application observability with standardized APIs, SDKs, and tools to collect observability signals - metrics, traces, and logs.
 
-# OpenTelementry .NET Tracing API
+## OpenTelementry .NET Tracing API
 
 .NET runtime contains an `Activity` class, which is used for tracing purposes and represents a [Span](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#span) in the OpenTelemetry terminology. The `Activity` class is part of `System.Diagnostics.DiagnosticSource` package. 
 
@@ -14,7 +14,7 @@ It means, you can instrument applications to emit OpenTelemetry traces using sta
 If you want to use OpenTelemetry terminology (like tracer, span instead of activitySource, activity) also in your application, you can use [OpenTelementry.API](https://www.nuget.org/packages/opentelemetry.api) that is a wrapper around the .NET `Activity` classes. 
 
 
-# Instrumenting .NET Application
+## Instrumenting .NET Application
 
 Use the `ActivitySource` class, which provides the name and version of the application doing the instrumentation. The instance of `ActivitySource` should be created once and reused throughout the application.
 
@@ -44,7 +44,7 @@ Populate activity with tags follow the [ OpenTelemetry semantic conventions](htt
 
 
 
-# Configure OpenTelemetry
+## Configure OpenTelemetry
 
 Firstly install the nuget package `OpenTelemetry.Extensions.Hosting` to expose the OpenTelemetry SDK.
 
@@ -59,7 +59,7 @@ builder.Services.AddOpenTelemetry()
                 .AddSource("serviceName"); // Configure sources to listen
     });
  ```
-## Instrumentations
+### Instrumentations
 There are two ways how to instrument. 
 * Manually instrumentation means adding custom instruments to .NET application using the `Activity` class. 
 * [Automatic instrumentation](https://opentelemetry.io/docs/zero-code/net/instrumentations/) adds external instruments (HTTP, SQL, Elastic, Redis,...) to .NET application without modify a source code by adding `OpenTelemetry.AutoInstrumentation` nuget package.
@@ -82,7 +82,7 @@ builder.Services.AddOpenTelemetry()
 
 [Sampling](https://opentelemetry.io/docs/concepts/sampling/) (especially  Head Sampling) can be configured by `tracing.SetSampler(...)`.
 
-## Exporters
+### Exporters
 
 An application can export instrumentations by exporters. Many exporters implementation exist such as Console, Zipkin, OTEL.
 
