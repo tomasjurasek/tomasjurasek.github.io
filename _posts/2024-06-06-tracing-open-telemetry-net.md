@@ -66,7 +66,7 @@ There are two ways how to instrument.
 
 Automatic instrumentation can also enabled by `OpenTelemetry.Instrumentation.X` nuget packages that are specific per resource.
 
-For example, instruments for HTTP Request (In) and HttpClient Request (Out) are in the `OpenTelemetry.Instrumentation.AspNetCore` and `OpenTelemetry.Instrumentation.Http` packages, which also configures/propagates trace context through [Propagator API](https://opentelemetry.io/docs/specs/otel/context/api-propagators/) via HTTP Headers.  
+For example, instruments for HTTP Request (In) and HttpClient Request (Out) are in the `OpenTelemetry.Instrumentation.AspNetCore` and `OpenTelemetry.Instrumentation.Http` packages, which also configures and propagates trace context through [Propagator API](https://opentelemetry.io/docs/specs/otel/context/api-propagators/) via HTTP Headers.  
 
  ```csharp
 builder.Services.AddOpenTelemetry()
@@ -76,7 +76,7 @@ builder.Services.AddOpenTelemetry()
                     .AddService("serviceName"))
                 .AddSource("serviceName"); // Configures sources to listen (instrument)
                 .AddAspNetCoreInstrumentation() // HTTP Request (In) - Configures tracing context from headers
-                .AddHttpClientInstrumentation() // Http Client Request (Out) - Propagates tracing context to headers
+                .AddHttpClientInstrumentation() // HTTP Request (Out) - Propagates tracing context to headers
     });
  ```
 
@@ -96,7 +96,7 @@ builder.Services.AddOpenTelemetry()
                     .AddService("serviceName"))
                 .AddSource("serviceName"); // Configure sources to listen (instrument)
                 .AddAspNetCoreInstrumentation() // HTTP Request (In)
-                .AddHttpClientInstrumentation() // Http Client Request (Out)
+                .AddHttpClientInstrumentation() // HTTP Request (Out)
                 .AddOtlpExporter()
     });
  ```
