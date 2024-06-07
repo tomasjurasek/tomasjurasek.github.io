@@ -3,15 +3,15 @@ layout: single
 title:  "Distributed Tracing in .NET with OpenTelemetry"
 ---
 
-[OpenTelemetry](https://opentelemetry.io/) brings a de-facto standard for application observability with standardized APIs, SDKs, and tools to collect observability signals - metrics, traces, and logs.
+[OpenTelemetry](https://opentelemetry.io/) establishes a de-facto standard for application observability by providing standardized APIs, SDKs, and tools to collect signals - metrics, traces, and logs.
 
 ## OpenTelementry .NET Tracing API
 
 .NET runtime contains an `Activity` class, which is used for tracing purposes and represents a [Span](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#span) in the OpenTelemetry terminology. The `Activity` class is part of `System.Diagnostics.DiagnosticSource` package. 
 
-It means, you can instrument applications to emit OpenTelemetry traces using standard .NET Runtime.
+This allows instrument applications to emit OpenTelemetry traces using the standard .NET Runtime.
 
-If you want to use OpenTelemetry terminology (like tracer, span instead of activitySource, activity) also in your application, you can use [OpenTelementry.API](https://www.nuget.org/packages/opentelemetry.api) that is a wrapper around the .NET `Activity` classes. 
+To align more closely with OpenTelemetry terminology (like tracer, span instead of activitySource, activity) in the application, use [OpenTelementry.API](https://www.nuget.org/packages/opentelemetry.api), which wraps the .NET `Activity` classes. 
 
 
 ## Instrumenting .NET Application
@@ -24,13 +24,13 @@ Use the `ActivitySource` class, which provides the name and version of the appli
     "1.0.0");
 `
 
-Then, use the `ActivitySource` instance to create an `Activity` instance, which represents a single-span operation.
+Use the `ActivitySource` instance to create an `Activity` instance, which represents a single-span operation.
 
 `using var activity = activitySource.StartActivity("ActivityName");`
 
 If there are no listeners/samplers interested in this activity, the `StartActivity` returns null.
 
-`StartActivity` start an activity and automatically becomes the current activity in the `ActivityContext.Current` and propagate the `ActivityContext` from the parent activity.
+The `StartActivity` method starts an activity  and sets it as the current activity in the `ActivityContext.Current` and propagates the `ActivityContext` from the parent activity.
 
 
  ```csharp
@@ -46,9 +46,7 @@ Populate activity with tags follow the [ OpenTelemetry semantic conventions](htt
 
 ## Configure OpenTelemetry
 
-Firstly install the nuget package `OpenTelemetry.Extensions.Hosting` to expose the OpenTelemetry SDK.
-
-Use OpenTelemetry SDK to setup a basic collection of traces.
+Install the nuget package `OpenTelemetry.Extensions.Hosting` to expose the OpenTelemetry SDK.
 
  ```csharp
 builder.Services.AddOpenTelemetry()
