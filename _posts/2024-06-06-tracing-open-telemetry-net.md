@@ -3,7 +3,7 @@ layout: single
 title:  "Distributed Tracing in .NET with OpenTelemetry"
 ---
 
-[OpenTelemetry](https://opentelemetry.io/) establishes a de-facto standard for application observability by providing standardized APIs, SDKs, and tools to collect signals - metrics, traces, and logs.
+[OpenTelemetry](https://opentelemetry.io/) establishes a de facto standard for application observability by providing standardized APIs, SDKs, and tools to collect signals - metrics, traces, and logs.
 
 ## OpenTelementry .NET Tracing API
 
