@@ -75,8 +75,8 @@ builder.Services.AddOpenTelemetry()
         tracing.SetResourceBuilder(ResourceBuilder.CreateDefault()
                     .AddService("serviceName"))
                 .AddSource("serviceName"); // Configures sources to listen (instrument)
-                .AddAspNetCoreInstrumentation() // HTTP Request (In) - Configures tracing context from headers
-                .AddHttpClientInstrumentation() // HTTP Request (Out) - Propagates tracing context to headers
+                .AddAspNetCoreInstrumentation() // HTTP Requests (In) - Configures tracing context from headers
+                .AddHttpClientInstrumentation() // HTTP Requests (Out) - Propagates tracing context to headers
     });
  ```
 
@@ -95,8 +95,8 @@ builder.Services.AddOpenTelemetry()
         tracing.SetResourceBuilder(ResourceBuilder.CreateDefault()
                     .AddService("serviceName"))
                 .AddSource("serviceName"); // Configure sources to listen (instrument)
-                .AddAspNetCoreInstrumentation() // HTTP Request (In)
-                .AddHttpClientInstrumentation() // HTTP Request (Out)
+                .AddAspNetCoreInstrumentation() // HTTP Requests (In)
+                .AddHttpClientInstrumentation() // HTTP Requests (Out)
                 .AddOtlpExporter()
     });
  ```
