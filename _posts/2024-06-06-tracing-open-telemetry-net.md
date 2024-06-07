@@ -86,7 +86,7 @@ builder.Services.AddOpenTelemetry()
 
 An application can export instrumentations by exporters. Many exporters implementation exist such as Console, Zipkin, OTEL.
 
-For example, export traces to the OTEL collector install `OpenTelemetry.Exporter.OpenTelemetryProtocol` and configure it using [OTLP Exporter Configuration](https://opentelemetry.io/docs/languages/sdk-configuration/otlp-exporter/).
+For example, export traces to the OTEL collector by `OpenTelemetry.Exporter.OpenTelemetryProtocol` and configure it using [OTLP Exporter Configuration](https://opentelemetry.io/docs/languages/sdk-configuration/otlp-exporter/).
 
  ```csharp
 builder.Services.AddOpenTelemetry()
