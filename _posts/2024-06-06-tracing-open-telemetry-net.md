@@ -1,25 +1,48 @@
 ---
 layout: single
-title:  "Metrics in .NET with OpenTelemetry"
+title:  "Distributed Tracing in .NET with OpenTelemetry"
 ---
 
 [OpenTelemetry](https://opentelemetry.io/) establishes a de facto standard for application observability by providing standardized APIs, SDKs, and tools to collect signals - metrics, traces, and logs.
 
-## OpenTelementry .NET Metrics API
+## OpenTelementry .NET Tracing API
 
-The .NET runtime contains a most of [Metric API](...), that allows applications to emit OpenTelemetry metrics using the standard .NET Runtime.
+The .NET runtime contains an `Activity` class, which is used for tracing purposes and represents a [Span](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#span) in OpenTelemetry terminology. The `Activity` class is part of the `System.Diagnostics.DiagnosticSource` package. 
 
-## Metrics
+This allows applications to emit OpenTelemetry traces using the standard .NET Runtime.
 
-Use the `Meter` class, which is responsibles to create metric instruments (reports to measurements) to create manually metrics from the `System.Diagnostics.DiagnosticSource` nuget package.
+To align more closely with OpenTelemetry terminology (like tracer, span instead of activitySource, activity) in the application, use the [OpenTelementry.API](https://www.nuget.org/packages/opentelemetry.api), which wraps the .NET `Activity` classes. 
 
-`static readonly Meter MyMeter = new("serviceName", "1.0");
+
+## Manual Instrumentation
+
+Use the `ActivitySource` class, which provides the name and version of the application doing the instrumentation. The instance of `ActivitySource` should be created once and reused throughout the application.
+
+
+`static ActivitySource activitySource = new ActivitySource(
+    "serviceName",
+    "1.0.0");
 `
 
-The default there is no listener to meters, they need to be explicid configured into `MeterProvider`. The `MeterProvider` is entry point to configuration of all `Meter`'s and their instrumentatons.
+Use the `ActivitySource` instance to create an `Activity` instance, which represents a single-span operation.
+
+ ```csharp 
+ using var activity = activitySource.StartActivity("ActivityName");
+  ```
+
+If there are no listeners/samplers interested in this activity, the `StartActivity` returns null.
+
+The `StartActivity` method starts an activity  and sets it as the current activity in the `ActivityContext.Current` and propagates the `ActivityContext` from the parent activity.
 
 
+ ```csharp
+using var activity = activitySource.StartActivity("ActivityName");
+activity?.SetTag("http.url", "url");
+activity?.AddEvent(new ActivityEvent("activity event"));
+activity?.SetStatus(ActivityStatusCode.Error, "error");
+ ```
 
+Populate activity with tags follow the [ OpenTelemetry semantic conventions](https://github.com/open-telemetry/semantic-conventions/blob/main/docs/general/trace.md).
 
 
 
@@ -29,11 +52,11 @@ Install the nuget package `OpenTelemetry.Extensions.Hosting` to expose the OpenT
 
  ```csharp
 builder.Services.AddOpenTelemetry()
-    .WithMetrics(tracing =>
+    .WithTracing(tracing =>
     {
         tracing.SetResourceBuilder(ResourceBuilder.CreateDefault()
                     .AddService("serviceName"))
-                .AddMeter("serviceName"); // Configure sources to listen
+                .AddSource("serviceName"); // Configure sources to listen
     });
  ```
 ### Instrumentations
