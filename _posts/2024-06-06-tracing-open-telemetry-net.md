@@ -61,7 +61,7 @@ builder.Services.AddOpenTelemetry()
  ```
 ### Instrumentations
 There are two ways how to instrument. 
-* Manually instrumentation means adding custom instruments to .NET application using the `Activity` class. 
+* Manual instrumentation means adding custom instruments to .NET application using the `Activity` class. 
 * [Automatic instrumentation](https://opentelemetry.io/docs/zero-code/net/instrumentations/) adds external instruments (HTTP, SQL, Elastic, Redis,...) to .NET application without modify a source code by adding `OpenTelemetry.AutoInstrumentation` nuget package.
 
 Automatic instrumentation can also enabled by `OpenTelemetry.Instrumentation.X` nuget packages that are specific per resource.
