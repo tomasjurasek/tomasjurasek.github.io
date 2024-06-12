@@ -32,6 +32,7 @@ public static class ApplicationMetrics
 {
     private static readonly Meter meter = new Meter("applicationName", "1.0.0");
     private static readonly Counter<int> applicationCounter = meter.CreateCounter<int>("applicationCounter");
+    
     public static void IncreaceCounter() => applicationCounter.Add(1);
 }
   ```
