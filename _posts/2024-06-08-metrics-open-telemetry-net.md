@@ -69,7 +69,7 @@ builder.Services.AddOpenTelemetry()
 Metrics instruments must be registered by `AddMeter("meterName")` to `MeterProvider`. There exist some build-in `Meter`'s to instrument ASP.NET application
  `Microsoft.AspNetCore.Hosting`, `Microsoft.AspNetCore.Server.Kestrel`, `System.Net.Http`.
 
- To instrument the runtime of the application (ram, cpu, gc,...) install `OpenTelemetry.Instrumentation.Runtime` and configure it by `AddRuntimeInstrumentation`.
+ To instrument the application's runtime (ram, cpu, gc,...) install `OpenTelemetry.Instrumentation.Runtime` and configure it by `AddRuntimeInstrumentation`.
 
   ```csharp
 builder.Services.AddOpenTelemetry()
