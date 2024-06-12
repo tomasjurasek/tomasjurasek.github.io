@@ -20,7 +20,7 @@ Use the `Meter` class, which is responsible for creating metric instruments to c
  static readonly Meter meter = new("serviceName", "1.0");
   ```
 
-The default, there is no listener to meters; they need to be explicit configured into `MeterProvider.` The `MeterProvider` is the entry point to the configuration of all `Meter`'s and their instrumentation.
+The default, there is no listener to meters; they need to be explicit configured into the `MeterProvider.` The `MeterProvider` is the entry point to the configuration of all `Meter`'s and their instrumentation.
 
 > It's not recommended to initialize the instrument for every metric execution. Create a (static) wrapper over metrics.
 
