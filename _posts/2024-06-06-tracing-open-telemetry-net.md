@@ -85,9 +85,9 @@ builder.Services.AddOpenTelemetry()
 
 ### Exporters
 
-Exporters allow an application to send instrumentation data to various backends, such as Console, Zipkin, or OTEL.
+Exporters allow an application to send instrumentation data to various backends, such as Console, Zipkin, or OTLP.
 
-For example, export traces to the OTEL collector by `OpenTelemetry.Exporter.OpenTelemetryProtocol` and configure it using [OTLP Exporter Configuration](https://opentelemetry.io/docs/languages/sdk-configuration/otlp-exporter/).
+For example, export traces to the OTLP collector by `OpenTelemetry.Exporter.OpenTelemetryProtocol` and configure it using [OTLP Exporter Configuration](https://opentelemetry.io/docs/languages/sdk-configuration/otlp-exporter/).
 
  ```csharp
 builder.Services.AddOpenTelemetry()
