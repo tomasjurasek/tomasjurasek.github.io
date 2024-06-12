@@ -3,7 +3,7 @@ layout: single
 title:  "Metrics in .NET with OpenTelemetry"
 ---
 
-In the previous article, I wrote about [Dsitributed Tracing with OpenTelementry](https://tomasjurasek.github.io/2024/06/06/tracing-open-telemetry-net/). 
+In the previous article, I wrote about [Distributed Tracing with OpenTelementry](https://tomasjurasek.github.io/2024/06/06/tracing-open-telemetry-net/). 
 Now, let's write about [Metrics](https://opentelemetry.io/docs/specs/otel/metrics/).
 
 ## OpenTelementry .NET Metrics API
@@ -32,7 +32,7 @@ public static class ApplicationMetrics
 {
     private static readonly Meter meter = new Meter("applicationName", "1.0.0");
     private static readonly Counter<int> applicationCounter = meter.CreateCounter<int>("applicationCounter");
-    
+
     public static void IncreaceCounter() => applicationCounter.Add(1);
 }
   ```
