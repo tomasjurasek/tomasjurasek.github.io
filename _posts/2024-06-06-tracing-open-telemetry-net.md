@@ -3,7 +3,7 @@ layout: single
 title:  "Distributed Tracing in .NET with OpenTelemetry"
 ---
 
-[OpenTelemetry](https://opentelemetry.io/) establishes a de facto standard for application observability by providing standardized APIs, SDKs, and tools to collect signals - metrics, traces, and logs.
+This article is part of a series about [OpenTelemetry](https://opentelemetry.io/) in .NET. OpenTelemetry establishes a de facto standard for application observability by providing standardized APIs, SDKs, and tools to collect signals - metrics, traces, and logs.
 
 ## OpenTelementry .NET Tracing API
 
@@ -19,10 +19,11 @@ To align more closely with OpenTelemetry terminology (like tracer, span instead 
 Use the `ActivitySource` class, which provides the name and version of the application doing the instrumentation. The instance of `ActivitySource` should be created once and reused throughout the application.
 
 
-`static ActivitySource activitySource = new ActivitySource(
+ ```csharp 
+ static ActivitySource activitySource = new ActivitySource(
     "serviceName",
     "1.0.0");
-`
+ ```
 
 Use the `ActivitySource` instance to create an `Activity` instance, which represents a single-span operation.
 
