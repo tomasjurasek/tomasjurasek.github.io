@@ -32,7 +32,7 @@ public static class ApplicationMetrics
 {
     private static readonly Meter meter = new Meter("applicationName", "1.0.0");
     private static readonly Counter<int> applicationCounter = meter.CreateCounter<int>("applicationCounter");
-    public static void IncreateApplicationCounter() => applicationCounter.Add(1);
+    public static void IncreaceCounter() => applicationCounter.Add(1);
 }
   ```
 #### Usage
@@ -40,7 +40,7 @@ public static class ApplicationMetrics
 public void SomeMethod()
 {
     // Code
-    ApplicationMetrics.IncreateApplicationCounter();
+    ApplicationMetrics.IncreaceCounter();
     // Code
 }
 ```
