@@ -8,7 +8,7 @@ Now, let's write about [Metrics](https://opentelemetry.io/docs/specs/otel/metric
 
 ## OpenTelementry .NET Metrics API
 
-The .NET runtime contains most of [Metric API](https://opentelemetry.io/docs/specs/otel/metrics/api/), that allows applications to emit OpenTelemetry metrics using the standard .NET Runtime.
+The .NET runtime contains most of [Metric API](https://opentelemetry.io/docs/specs/otel/metrics/api/), that allows applications to emit OpenTelemetry metrics using the standard .NET runtime.
 
 ## Metrics
 
