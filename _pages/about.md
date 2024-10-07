@@ -12,6 +12,7 @@ I try to understand complex distributed systems and how to build long-lived, eas
 I'm the organizer of [Domain-Driven Design Meetups Brno](https://www.meetup.com/domain-driven-design-meetups-brno/), where people share their experiences building complex systems.
 
 The topics with which I can help:
+* Microservices
 * Domain-Driven Design
 * Event Sourcing
 * CQRS
