@@ -15,8 +15,8 @@ The topics with which I can help:
 * Domain-Driven Design
 * Event Sourcing
 * CQRS
-* Software Architecture
-* Things around .NET
+* Messaging & Event-Driven Architecture
+* .NET Architecture & things around .NET
 
 
 Feel free to contact me by [e-mail](jurasek.tomas@gmail.com).
