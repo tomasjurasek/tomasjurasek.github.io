@@ -5,7 +5,9 @@ title:  "About"
 ---
 
  
-I'm a software developer, architect, and consultant based in Brno. I try to understand complex distributed systems and how to build long-lived, easily extensible products.
+I'm a software developer, architect, and consultant based in Brno. 
+
+I try to understand complex distributed systems and how to build long-lived, easily extensible products.
 
 I'm the organizer of [Domain-Driven Design Meetups Brno](https://www.meetup.com/domain-driven-design-meetups-brno/), where people share their experiences building complex systems.
 
