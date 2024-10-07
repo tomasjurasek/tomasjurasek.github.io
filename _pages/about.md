@@ -20,4 +20,4 @@ The topics with which I can help:
 * .NET Architecture & things around .NET
 
 
-Feel free to contact me by [e-mail](jurasek.tomas@gmail.com).
+Feel free to contact me by [e-mail](mailto:jurasek.tomas@gmail.com).
