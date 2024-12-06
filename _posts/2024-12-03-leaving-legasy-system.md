@@ -59,4 +59,4 @@ Transitioning to new systems or practices requires training and resources. Leade
 
 Recognizing and celebrating progress, even small wins, boosts morale and reinforces the value of the change initiative.
 
-**PS**: Be aware of companies that want to do this thing silently without the power of change.
+**PS**: Be aware of companies that want to do legacy system leaving silently without the power of change.
