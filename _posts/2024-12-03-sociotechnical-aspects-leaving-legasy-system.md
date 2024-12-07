@@ -1,11 +1,10 @@
 ---
 layout: single
-title:  "Sociotechnical aspects of leaving a legacy system"
+title:  "Socio-technical aspects of leaving a legacy system"
 ---
 
-Leaving a legacy system is more than modernizing software. It's about modernizing a whole ecosystem—an interconnected network of technology, people, and processes—that continues to thrive and innovate long after its initial creation. This endeavor goes beyond code; it touches leadership, culture, and the art of change management.
+Leaving a legacy system is more than modernizing software. It's about modernizing a whole ecosystem—an interconnected network of technology, people, and processes—that continues to thrive and innovate long after its initial creation. This endeavor goes beyond code; it touches leadership, culture, and the art of change management - **its's socio-technical challenge**.
 
-Here, we'll explore the multifaceted challenge of leaving a legacy system, focusing on three critical aspects: **leadership**, **culture switch**, and **change management**.
 
 # **Leadership: Vision and Guiding the Journey**
 
