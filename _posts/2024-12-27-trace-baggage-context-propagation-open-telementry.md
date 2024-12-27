@@ -22,7 +22,7 @@ Format
 
 ## BaggageContext
 
-The `baggage `header represents incomming baggage context. Its `key=value` representation. 
+The `baggage` header represents incomming baggage context. Its `key=value` representation. 
 
 `baggage: key1=value1`
 
