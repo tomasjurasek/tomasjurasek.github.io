@@ -67,7 +67,7 @@ builder.Services.AddOpenTelemetry()
 
  ```
 
- If you are interested how the HTTP Propagation is working - [Incomming HTTP](https://github.com/open-telemetry/opentelemetry-dotnet-contrib/blob/main/src/OpenTelemetry.Instrumentation.AspNetCore/Implementation/HttpInListener.cs#L109), [OutComming HTTP](https://github.com/open-telemetry/opentelemetry-dotnet-contrib/blob/main/src/OpenTelemetry.Instrumentation.Http/Implementation/HttpHandlerDiagnosticListener.cs#L94).
+ If you are interested how the HTTP Propagation is working - [Incomming HTTP](https://github.com/open-telemetry/opentelemetry-dotnet-contrib/blob/main/src/OpenTelemetry.Instrumentation.AspNetCore/Implementation/HttpInListener.cs#L109), [Outgoing HTTP](https://github.com/open-telemetry/opentelemetry-dotnet-contrib/blob/main/src/OpenTelemetry.Instrumentation.Http/Implementation/HttpHandlerDiagnosticListener.cs#L94).
 
 
  
