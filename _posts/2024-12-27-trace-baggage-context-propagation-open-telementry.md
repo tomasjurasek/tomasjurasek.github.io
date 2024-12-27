@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Trace & Baggage Context Propagation .NET with OpenTelemetry"
+title:  "Trace & Baggage Context Propagation in .NET with OpenTelemetry"
 ---
 
 Context Propagation is an essential concept of distributed tracing. As the name suggests, it propagates the `trace` and `baggage` context over a network to other services.
