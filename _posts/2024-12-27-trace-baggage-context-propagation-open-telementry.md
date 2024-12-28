@@ -21,7 +21,7 @@ The `traceparent` header contains information about the current trace.
 traceparent: 00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-01
 ```
 
-Format
+**Format**
 * Version (00)
 * Trace-Id (0af7651916cd43dd8448eb211c80319c)
 * Parent-Id (b7ad6b7169203331)
