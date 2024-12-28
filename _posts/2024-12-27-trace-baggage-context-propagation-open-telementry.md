@@ -71,6 +71,7 @@ Sdk.SetDefaultTextMapPropagator(new CompositeTextMapPropagator(
     }));
  ```
 
+ 
  ## HTTP Propagation
 
  By adding the following instrumentation, OpenTelemetry will automatically handle context propagation for incoming and outgoing HTTP requests.
