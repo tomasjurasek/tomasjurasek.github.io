@@ -53,7 +53,9 @@ builder.Services.AddOpenTelemetry()
     .UseOtlpExporter()
     .WithTracing(tracing =>
         {
-            tracing.AddSource(builder.Environment.ApplicationName);
+            tracing
+                .SetResourceBuilder(ResourceBuilder.CreateDefault()
+                    .AddService(builder.Environment.ApplicationName));
         });
  ```
 
@@ -83,7 +85,8 @@ Sdk.SetDefaultTextMapPropagator(new CompositeTextMapPropagator(
     .WithTracing(tracing =>
     {
         tracing
-            .AddSource(builder.Environment.ApplicationName)
+            .SetResourceBuilder(ResourceBuilder.CreateDefault()
+                .AddService(builder.Environment.ApplicationName));
             .AddAspNetCoreInstrumentation()
             .AddHttpClientInstrumentation();
     });
