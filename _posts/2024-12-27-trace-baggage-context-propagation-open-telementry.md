@@ -39,7 +39,7 @@ baggage: key1=value1
 
 In .NET with OpenTelemetry, do not use `Activity.Baggage` to read or modify baggage. Instead, use `Baggage.Current` from the `OpenTelemetry.Api` package. 
 
-This ensures that baggage context is managed consistently with the OpenTelemetry specifications.
+This ensures that `baggage context` is managed consistently with the OpenTelemetry specifications.
 
 > Tmportant: This header values are transferred in plaintext. Avoid placing sensitive or personally identifiable information in baggage context.
 
