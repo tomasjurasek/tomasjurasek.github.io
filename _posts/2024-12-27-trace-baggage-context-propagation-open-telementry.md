@@ -11,7 +11,7 @@ The W3C provides standards for propagation:
 * [Trace Context](https://www.w3.org/TR/trace-context/) 
 * [Baggage Context](https://www.w3.org/TR/baggage/)
 
-These contexts are transferred in HTTP headers (or other protocols), typically as traceparent for trace context and baggage for baggage context. Below, we will explore how this works in .NET with OpenTelemetry.
+These contexts are transferred in HTTP headers (or other protocols), typically as `traceparent` for `trace context` and `baggage` for `baggage context`. Below, we will explore how this works in .NET with OpenTelemetry.
 
 ## TraceContext
 
