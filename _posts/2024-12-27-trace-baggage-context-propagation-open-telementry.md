@@ -40,7 +40,7 @@ Do not use `Activity.Baggage` to read or modify baggage. Instead, use `Baggage.C
 
 This ensures that `baggage context` is managed consistently with the OpenTelemetry specifications.
 
-> Tmportant: This header values are transferred in plaintext. Avoid placing sensitive or personally identifiable information in baggage context.
+> Important: These header values are transferred in plaintext to outgoing HTTP requests — internal, third parties, etc. Avoid placing sensitive or personally identifiable information in the baggage context.
 
 # .NET Usage
 
@@ -50,12 +50,10 @@ Tracing configuration registers `TraceContextPropagator` and `BaggageContextProp
  ```csharp 
 builder.Services.AddOpenTelemetry()
     .UseOtlpExporter()
-    .WithTracing(tracing =>
-        {
-            tracing
-                .SetResourceBuilder(ResourceBuilder.CreateDefault()
-                    .AddService(builder.Environment.ApplicationName));
-        });
+    .ConfigureResource(configure => {
+        configure.AddService(builder.Environment.ApplicationName)
+    })
+    .WithTracing();
  ```
 
  These propagators enable extracting `traceparent` and `baggage` headers format from incoming requests and injecting them into outgoing requests.
@@ -82,11 +80,12 @@ Sdk.SetDefaultTextMapPropagator(new CompositeTextMapPropagator(
  ```csharp 
  builder.Services.AddOpenTelemetry()
     .UseOtlpExporter()
+    .ConfigureResource(configure => {
+        configure.AddService(builder.Environment.ApplicationName)
+    })
     .WithTracing(tracing =>
     {
         tracing
-            .SetResourceBuilder(ResourceBuilder.CreateDefault()
-                .AddService(builder.Environment.ApplicationName));
             .AddAspNetCoreInstrumentation()
             .AddHttpClientInstrumentation();
     });
