@@ -96,7 +96,7 @@ If you want to see how this works under the hood, check out the OpenTelemetry .N
  
 ## Manual Propagation
 
-For protocols not natively instrumented (e.g., messaging systems or databases), you'll need to manually propagate the context by calling the `Inject` and `Extract` methods on the `Propagators.DefaultTextMapPropagator`.
+For protocols not natively instrumented (messaging systems, outbox, etc), you'll need to manually propagate the context by calling the `Inject` and `Extract` methods on the `Propagators.DefaultTextMapPropagator`.
 
 
  ```csharp 
