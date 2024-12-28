@@ -72,7 +72,7 @@ Sdk.SetDefaultTextMapPropagator(new CompositeTextMapPropagator(
  ```
 
  
- ## HTTP Propagation
+## HTTP Propagation
 
  By adding the following instrumentation, OpenTelemetry will automatically handle context propagation for incoming and outgoing HTTP requests.
 
@@ -108,7 +108,6 @@ public void SendMessage(IMessage message)
 {
     var propagationContext = new PropagationContext(Activity.Current?.Context ?? default, Baggage.Current);
 
-
     Propagators.DefaultTextMapPropagator.Inject(
         propagationContext,
         message.Headers,
@@ -118,11 +117,11 @@ public void SendMessage(IMessage message)
     // Publishing ...
 }
 
-public void ProcessMessage(IDictionary<string, string> messageHeaders)
+public void ProcessMessage(IMessage message)
 {
     var propagationContext = Propagators.DefaultTextMapPropagator.Extract(
         default,
-        messageHeaders,
+        message.Headers,
         (headers, key) => headers.TryGetValue(key, out var value) ? new[] { value } : Array.Empty<string>()
     );
     
