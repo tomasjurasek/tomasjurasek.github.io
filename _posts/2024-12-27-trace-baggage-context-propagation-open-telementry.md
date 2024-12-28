@@ -27,7 +27,7 @@ Format
 * Parent-Id (b7ad6b7169203331)
 * Trace-Flags (01)
 
-n .NET, a trace (or span) is represented by an Activity object. Each Activity instance corresponds to one span in the trace.
+In .NET, a trace (or span) is represented by an Activity object. Each Activity instance corresponds to one span in the trace.
 
 ## BaggageContext
 
